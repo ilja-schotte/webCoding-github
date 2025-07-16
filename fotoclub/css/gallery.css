@@ -1,4 +1,6 @@
 .gallery {
     display: flex;
+    height: 100vh;
+    width: 100vw;
     background-color: rgba(209, 195, 182, 1);
 }
