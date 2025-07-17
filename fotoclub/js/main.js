@@ -16,6 +16,6 @@ let t2 = gsap.timeline({
     },
 });
 
-t1.from('#about_darkbox',{ x: 100, y: 100, opacity:0, duration:1})
-t2.from('#about_whitebox',{ x: -100, y: -100, opacity:0, duration:1})
+t1.from('#about_darkbox',{ x: -100, y: -100, opacity:0, duration:1})
+t2.from('#about_whitebox',{ x: 100, y: 100, opacity:0, duration:1})
 

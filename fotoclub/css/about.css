@@ -1,26 +1,29 @@
 .about {
     display: flex;
+    position: relative;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(196, 196, 196, 1));
-}
-
-#about_darkbox {
-    position: absolute;
-    display: flex;
-    background: gray;
-    width: 80%;
-    height: 80%;
-    opacity: 1;
-    z-index: 1;
+    background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(196, 196, 196, 1));
 }
 
 #about_whitebox {
     position: absolute;
     display: flex;
+    bottom: 5%;
+    right: calc(calc(100% - 3000px) / 2 );
     background: white;
-    width: 80%;
-    height: 80%;
+    width: 2800px;
+    height: 75%;
     opacity: 1;
     z-index: 2;
+}
+
+#about_darkbox {
+    display: flex;
+    background: gray;
+    margin-top: 5%;
+    width: 2800px;
+    height: 75%;
+    opacity: 1;
+    z-index: 1;
 }
