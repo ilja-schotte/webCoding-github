@@ -5,13 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fotoclub</title>
 </head>
@@ -32,18 +37,30 @@
     <main>
         <section class="landing">
             <img src="media/pexels-ajlobo-1205022.jpg" class="landing_background">
+            <div class="section_main">
+                <div id="landing_text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <h1>Das Auge macht das Bild,</h1>
+                    <h2>nicht die Kamera.</h2>
+                    <h3>Gisèle Freund</h3>
+                </div>
+            </div>
         </section>
         <section class="about">
-            Über uns
+            <div class="section_main">
+                <div id="about_darkbox"></div>
+                <div id="about_whitebox"></div>
+            </div>
         </section>
         <section class="gallery">
-            Gallerie
+            <div class="section_main"></div>
         </section>
     </main>
     <footer>
 
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

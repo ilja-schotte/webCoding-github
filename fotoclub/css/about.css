@@ -2,5 +2,25 @@
     display: flex;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(227, 223, 213, 1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(196, 196, 196, 1));
+}
+
+#about_darkbox {
+    position: absolute;
+    display: flex;
+    background: gray;
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+    z-index: 1;
+}
+
+#about_whitebox {
+    position: absolute;
+    display: flex;
+    background: white;
+    width: 80%;
+    height: 80%;
+    opacity: 1;
+    z-index: 2;
 }

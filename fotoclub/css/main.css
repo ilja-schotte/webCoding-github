@@ -12,43 +12,9 @@ main {
     perspective: 10px;
 }
 
-nav {
+.section_main{
     display: flex;
-    width: 100vw;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    color: white;
-    text-transform: uppercase;
-    background-color: rgba(105, 18, 73, 1);
-    padding: clamp(20px, 2vh, 30px) clamp(100px, 10vw, 500px);
-}
-
-.logo {
-    font-size: 1.25rem;
-    letter-spacing: 0.5rem;
-}
-
-.nav-links {
-    display: flex;
-    width: 20vw;
-    min-width: 400px;
-    max-width: 500px;
-    justify-content: space-between;
-
-}
-
-.nav-links li {
-    list-style: none;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-size: 1rem;
-    font-weight: 300;
+    width: 3000px;
+    height: 100%;
+    margin: auto;
 }
