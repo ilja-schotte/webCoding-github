@@ -14,7 +14,8 @@ main {
 
 .section_main{
     display: flex;
+    position: relative;
     width: 3000px;
-    height: 100%;
+    height: 80%;
     margin: auto;
 }

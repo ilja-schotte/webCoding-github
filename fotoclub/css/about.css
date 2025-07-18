@@ -6,24 +6,45 @@
     background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(196, 196, 196, 1));
 }
 
-#about_whitebox {
-    position: absolute;
+#about_darkbox {
     display: flex;
-    bottom: 5%;
-    right: calc(calc(100% - 3000px) / 2 );
-    background: white;
-    width: 2800px;
-    height: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: gray;
+    width: 95%;
+    height: 90%;
+    opacity: 1;
+    z-index: 1;
+}
+#about_whitebox {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: end;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    width: 95%;
+    height: 90%;
     opacity: 1;
     z-index: 2;
 }
 
-#about_darkbox {
+#about_whitebox h1{
+    height: 5%;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 200;
+    color: white;
+    letter-spacing: 10px;
+}
+
+#about_content{
     display: flex;
-    background: gray;
-    margin-top: 5%;
-    width: 2800px;
-    height: 75%;
-    opacity: 1;
-    z-index: 1;
+    height: 95%;
+    width: 100%;
+    background: white;
+    box-shadow: 10px 10px 50px -15px rgb(207, 207, 207);
 }
