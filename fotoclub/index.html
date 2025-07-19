@@ -28,14 +28,14 @@
                 <h4>dwd fotoclub</h4>
             </div>
             <ul class="nav-links">
-                <li><a href="#">Startseite</a></li>
-                <li><a href="#">Über uns</a></li>
-                <li><a href="#">Gallerie</a></li>
+                <li><a href="#" class='navMenuItem' data-sectionname="landing">Startseite</a></li>
+                <li><a href="#" class='navMenuItem' data-sectionname="about">Über uns</a></li>
+                <li><a href="#" class='navMenuItem' data-sectionname="gallery">Gallerie</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="landing">
+        <section id="landing">
             <img src="media/pexels-ajlobo-1205022.jpg" class="landing_background">
             <div class="section_main">
                 <div id="landing_text">
@@ -46,8 +46,8 @@
                 </div>
             </div>
         </section>
-        <section class="about">
-            <div class="section_main">
+        <section id="about">
+            <div class="section_main"><
                 <div id="about_darkbox"></div>
                 <div id="about_whitebox">
                     <h1>über uns</h1>
@@ -55,8 +55,9 @@
                 </div>
             </div>
         </section>
-        <section class="gallery">
-            <div class="section_main"></div>
+        <section id="gallery">
+            <div class="section_main">
+            </div>
         </section>
     </main>
     <footer>
@@ -64,6 +65,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
