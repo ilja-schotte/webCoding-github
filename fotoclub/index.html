@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/about_swiper.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -16,7 +17,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Fotoclub</title>
 </head>
@@ -47,12 +48,47 @@
             </div>
         </section>
         <section id="about">
-            <div class="section_main"><
-                <div id="about_darkbox"></div>
-                <div id="about_whitebox">
-                    <h1>über uns</h1>
-                    <div id="about_content"></div>
+            <div class="section_main">
+                < <div id="about_darkbox">
+            </div>
+            <div id="about_whitebox">
+                <h1>über uns</h1>
+                <div id="about_content">
+                    <div class="about_content_boxes" id="about_content_box_left">
+                        <img src="media/pexels-omarhouc-752525.jpg" alt="">
+                    </div>
+                    <div class="about_content_boxes" id="about_content_box_center">
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+                        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                        sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                        ipsum dolor sit amet.
+                    </div>
+                    <div class="about_content_boxes" id="about_content_box_right">
+
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">Slide 1</div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">Slide 4</div>
+                                <div class="swiper-slide">Slide 5</div>
+                                <div class="swiper-slide">Slide 6</div>
+                                <div class="swiper-slide">Slide 7</div>
+                                <div class="swiper-slide">Slide 8</div>
+                                <div class="swiper-slide">Slide 9</div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+
+                    </div>
                 </div>
+            </div>
             </div>
         </section>
         <section id="gallery">
@@ -63,9 +99,13 @@
     <footer>
 
     </footer>
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+    <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+    <!-- main.js -->
     <script src="js/main.js"></script>
 </body>
 

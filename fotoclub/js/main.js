@@ -1,7 +1,14 @@
 "use strict";
 
 
-/* ========================== Navigation ========================== */
+
+
+
+
+/* 
+    ========================== Navigation ==========================
+    ================================================================
+*/
 function addClickEventsToMenuItems() {
 
     /*
@@ -25,7 +32,7 @@ addClickEventsToMenuItems();
 
 // ================================================================
 function changeStyleOfNavigationBar() {
-    
+
     /*
     Wenn die landing-section verlassen wird, soll sich der Stil
     der Navigationbar ändern.
@@ -38,7 +45,7 @@ function changeStyleOfNavigationBar() {
     const landingSectionObserver = new IntersectionObserver(function (
         entries,
         landingSectionObserver
-    ){
+    ) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 header.classList.remove('dark-mode');
@@ -53,33 +60,65 @@ function changeStyleOfNavigationBar() {
                 });
             }
         });
-    },landingSectionOptions);
+    }, landingSectionOptions);
     landingSectionObserver.observe(landing);
 }
 changeStyleOfNavigationBar();
 
 
+
+
+
+
+/* 
+    ============================ Über uns ==========================
+    ================================================================
+*/
+
+function initializeAboutAnimations() {
+
+    /*
+    Hintergrundanimationen in der Sektion "about"
+    */
+    let t1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: 'main',
+            start: "500",
+            scroller: "main"
+        },
+    });
+
+    let t2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: 'main',
+            start: "500",
+            scroller: "main"
+        },
+    });
+
+    t1.from('#about_darkbox', { x: -100, y: -100, opacity: 0, duration: 1 });
+    t2.from('#about_whitebox', { x: 100, y: 100, opacity: 0, duration: 1 });
+
+}
+initializeAboutAnimations();
+
 // ================================================================
-
-
-
-/* ============================ Über uns ========================== */
-// Hintergrundanimation
-let t1 = gsap.timeline({
-    scrollTrigger: {
-        trigger: 'main',
-        start: "500",
-        scroller: "main"
-    },
-});
-
-let t2 = gsap.timeline({
-    scrollTrigger: {
-        trigger: 'main',
-        start: "500",
-        scroller: "main"
-    },
-});
-
-t1.from('#about_darkbox', { x: -100, y: -100, opacity: 0, duration: 1 });
-t2.from('#about_whitebox', { x: 100, y: 100, opacity: 0, duration: 1 });
+function initializeAboutSwiperJS() {
+    var swiper = new Swiper(".mySwiper", {
+        direction: 'horizontal',
+        slidesPerView: 2,
+        grid: {
+            rows: 2,
+        },
+        spaceBetween: 30,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+}
+initializeAboutSwiperJS()
