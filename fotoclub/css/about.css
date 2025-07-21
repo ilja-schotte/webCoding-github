@@ -80,3 +80,14 @@
     padding-right: 100px;
 }
 
+.swiper-slide-header{
+    background: white;
+    height: 50%;
+    width: 100%;
+}
+
+.swiper-slide-footer{
+    height: 50%;
+    width: 100%;
+}
+

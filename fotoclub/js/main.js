@@ -82,7 +82,7 @@ function initializeAboutAnimations() {
     */
     let t1 = gsap.timeline({
         scrollTrigger: {
-            trigger: 'main',
+            trigger: '#about',
             start: "500",
             scroller: "main"
         },
@@ -90,7 +90,7 @@ function initializeAboutAnimations() {
 
     let t2 = gsap.timeline({
         scrollTrigger: {
-            trigger: 'main',
+            trigger: '#about',
             start: "500",
             scroller: "main"
         },
@@ -121,4 +121,4 @@ function initializeAboutSwiperJS() {
         },
     });
 }
-initializeAboutSwiperJS()
+initializeAboutSwiperJS();
