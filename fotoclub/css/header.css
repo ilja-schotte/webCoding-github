@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     position: fixed;
     height: 100px;
@@ -12,7 +12,8 @@ header{
 
 nav {
     display: flex;
-    width: 3000px;
+    width: 75vw;
+    min-width: 2000px;
     height: 100%;
     justify-content: space-between;
     align-items: center;
@@ -20,10 +21,11 @@ nav {
     background-color: transparent;
 }
 
-.logo h4{
+#logo-text{
     font-size: 2rem;
     letter-spacing: 0.5rem;
     font-weight: 300;
+    color: white;
 }
 
 .nav-links {
@@ -46,4 +48,75 @@ nav {
     font-weight: 300;
     color: white;
     transition: .5s;
+}
+
+/* Bildschirmbreite kleiner 3000px */
+@media screen and (max-width: 3000px) {
+
+    nav{
+        min-width: 1500px;
+    }
+
+    #logo-text {
+        font-size: 1.7rem;
+    }
+
+    .navMenuItem {
+        font-size: 1.1rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 2000px */
+@media screen and (max-width: 2000px) {
+
+    nav{
+        min-width: 1000px;
+    }
+
+    #logo-text {
+        font-size: 1.35rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .navMenuItem {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1500px */
+@media screen and (max-width: 1500px) {
+
+    nav{
+        min-width: 600px;
+    }
+
+    #logo-text {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .navMenuItem {
+        font-size: 0.7rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1000px */
+@media screen and (max-width: 1000px) {
+
+    .nav-links{
+        min-width: 300px;
+    }
+
+    #logo-text {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .navMenuItem {
+        font-size: 0.7rem;
+    }
+
 }

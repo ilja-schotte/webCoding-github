@@ -38,7 +38,7 @@ function changeStyleOfNavigationBar() {
     der Navigationbar ändern.
     */
 
-    const header = document.querySelector('header');
+    const header = document.querySelector('#logo-text');
     const landing = document.querySelector('#landing');
     const navMenuItems = document.querySelectorAll('.navMenuItem');
     const landingSectionOptions = {};
@@ -96,9 +96,11 @@ function initializeAboutAnimations() {
         },
     });
 
-    t1.from('#about_darkbox', { x: -100, y: -100, opacity: 0, duration: 1 });
-    t2.from('#about_whitebox', { x: 100, y: 100, opacity: 0, duration: 1 });
-
+    t1.from('#about_darkbox', { x: -100, y: -100, opacity: 0, duration: 0.8 });
+    t2.from('#about_whitebox', { x: 100, y: 100, opacity: 0, duration: 0.8 })
+      .from('#about_content_box_left', {y: 20, opacity: 0, duration: 0.3})
+      .from('#about_content_box_center', {y: 20, opacity: 0, duration: 0.3})
+      .from('#about_content_box_right', {y: 20, opacity: 0, duration: 0.3})
 }
 initializeAboutAnimations();
 

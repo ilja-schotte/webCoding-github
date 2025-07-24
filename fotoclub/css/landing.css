@@ -6,9 +6,10 @@
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
+    scroll-snap-align: start;
 }
 
-.landing_background{
+#landing_background {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -17,34 +18,95 @@
     transform: translateZ(-10px) scale(2);
 }
 
-#landing_text{
-    position:relative;
+#landing_text {
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    margin-top: 300px;
+    margin-top: clamp(100px, 6vw, 250px);
 }
 
-#landing_text i{
+#landing_text i {
     font-size: 2rem;
     color: rgb(104, 104, 104);
 }
 
 #landing_text h1 {
-    font-size: 5.5rem;
+    font-size: clamp(3.8rem, 1.8vw, 5.5rem);
     color: white;
-    line-height: 100px;
+    line-height: clamp(60px, 3vw, 100px);
 }
 
 #landing_text h2 {
-    font-size: 4.5rem;
+    font-size: clamp(3.0rem, 1.3vw, 4.5rem);
     color: white;
-    line-height: 100px;
+    line-height: clamp(60px, 3vw, 100px);
 }
 
 #landing_text h3 {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 0.5vw, 2rem);
     color: white;
     font-weight: 200;
-    line-height: 80px;
+    line-height: clamp(40px, 2.5vw, 70px);
 }
+
+/* Bildschirmbreite kleiner 3000px */
+@media screen and (max-width: 3000px) {
+
+    #landing_text {
+        margin-top: clamp(50px, 4vw, 120px);
+    }
+
+    #landing_text h1 {
+        font-size: clamp(2.8rem, 1.8vw, 3.7rem);
+    }
+
+    #landing_text h2 {
+        font-size: clamp(2rem, 1.3vw, 2.7rem);
+    }
+
+    #landing_text h3 {
+        font-size: clamp(1rem, 0.5vw, 1rem);
+    }
+}
+
+/* Bildschirmbreite kleiner 2000px */
+@media screen and (max-width: 2000px) {
+
+    #landing_text h1 {
+        font-size: clamp(2.8rem, 1.8vw, 3.7rem);
+    }
+
+    #landing_text h2 {
+        font-size: clamp(2rem, 1.3vw, 2.7rem);
+    }
+
+    #landing_text h3 {
+        font-size: clamp(1rem, 0.5vw, 1rem);
+    }
+
+    #landing_text i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Bildschirmbreite kleiner 1500px */
+@media screen and (max-width: 1500px) {
+
+    #landing_text h1 {
+        font-size: clamp(2.8rem, 1.8vw, 3.7rem);
+    }
+
+    #landing_text h2 {
+        font-size: clamp(2rem, 1.3vw, 2.7rem);
+    }
+
+    #landing_text h3 {
+        font-size: clamp(1rem, 0.5vw, 1rem);
+    }
+
+    #landing_text i {
+        font-size: 1rem;
+    }
+}
+

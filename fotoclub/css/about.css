@@ -4,6 +4,7 @@
     height: 100vh;
     width: 100vw;
     background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(196, 196, 196, 1));
+    scroll-snap-align: start;
 }
 
 #about_darkbox {
@@ -36,10 +37,10 @@
     height: 5%;
     width: 100%;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: clamp(2rem, 1.4vw, 3.5rem);
     font-weight: 200;
     color: white;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
 }
 
 #about_content {
@@ -55,10 +56,10 @@
 .about_content_boxes {
     display: flex;
     width: calc(100% / 3);
-    height: 100%;
+    height: auto;
 }
 
-#about_content_box_left{
+#about_content_box_left {
     padding-left: 100px;
 }
 
@@ -68,26 +69,109 @@
     object-fit: cover;
 }
 
-#about_content_box_center{
-    font-size: 1.5rem;
+#about_content_box_center {
+    font-size: 0.5vw;
     font-weight: 300;
     line-height: 40px;
     padding: 0px 100px;
     text-align: justify;
 }
 
-#about_content_box_right{
+#about_content_box_right {
     padding-right: 100px;
 }
 
-.swiper-slide-header{
+.swiper-slide-header {
     background: white;
     height: 50%;
     width: 100%;
 }
 
-.swiper-slide-footer{
+.swiper-slide-footer {
     height: 50%;
     width: 100%;
 }
 
+/* Bildschirmbreite kleiner 3000px */
+@media screen and (orientation: landscape) and (max-width: 3000px) {
+
+    #about_content {
+        padding: 70px 0px;
+    }
+
+    #about_whitebox h1 {
+        font-size: clamp(2rem, 1.4vw, 3.5rem);
+    }
+
+    #about_content_box_left {
+        padding-left: 70px;
+    }
+
+    #about_content_box_center {
+        padding: 0px 70px;
+        line-height: 30px;
+        font-size: 0.6vw;
+    }
+
+    #about_content_box_right {
+        padding-right: 70px;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 2000px */
+@media screen and (orientation: landscape) and (max-width: 2000px) {
+
+    #about_content {
+        padding: 40px 0px;
+    }
+
+    #about_whitebox h1 {
+        font-size: clamp(1.5rem, 1.4vw, 2rem);
+    }
+
+    #about_content_box_left {
+        padding-left: 40px;
+    }
+
+    #about_content_box_center {
+        padding: 0px 40px;
+        line-height: 25px;
+        font-size: 0.7vw;
+    }
+
+    #about_content_box_right {
+        padding-right: 40px;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1500px */
+@media screen and (orientation: landscape) and (max-width: 1500px) {
+
+    #about_content {
+        padding: 30px 0px;
+    }
+
+    #about_whitebox h1 {
+        font-size: 1.5vh;
+    }
+
+    #about_content_box_left {
+        padding-left: 30px;
+    }
+
+    #about_content_box_center {
+        padding: 0px 30px;
+        line-height: 15px;
+        font-size: 0.7vw;
+    }
+
+    #about_content_box_right {
+        padding-right: 30px;
+    }
+
+}
+
+
+/* Bildschirmbreite kleiner 1000px */

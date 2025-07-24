@@ -5,8 +5,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.dark-mode{
-    color: black !important;
+html {
+    font-size: 14px;
 }
 
 main {
@@ -14,13 +14,58 @@ main {
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
 }
 
-.section_main{
+a {
+    text-decoration: none;
+}
+
+.dark-mode {
+    color: black !important;
+}
+
+.section_main {
     display: flex;
     position: relative;
-    width: 3000px;
-    height: 80%;
+    width: 75vw;
+    min-width: 2000px;
+    height: 40vw;
     margin: auto;
 }
 
+.burger {
+    display: none;
+}
+
+.burger div{
+    width: 30px;
+    height: 3px;
+    background: rgba(266, 266, 266);
+    margin: 6px;
+}
+
+@media screen and (max-width: 3000px) {
+
+    .section_main {
+        min-width: 1500px;
+    }
+
+}
+
+@media screen and (max-width: 2000px) {
+
+    .section_main {
+        min-width: 1000px;
+    }
+
+}
+
+@media screen and (max-width: 1500px) {
+
+    .section_main {
+        min-width: 600px;
+    }
+
+}
