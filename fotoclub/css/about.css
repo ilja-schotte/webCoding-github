@@ -93,7 +93,7 @@
 }
 
 /* Bildschirmbreite kleiner 3000px */
-@media screen and (orientation: landscape) and (max-width: 3000px) {
+@media screen and (max-width: 3000px) {
 
     #about_content {
         padding: 70px 0px;
@@ -120,7 +120,7 @@
 }
 
 /* Bildschirmbreite kleiner 2000px */
-@media screen and (orientation: landscape) and (max-width: 2000px) {
+@media screen and (max-width: 2000px) {
 
     #about_content {
         padding: 40px 0px;
@@ -147,7 +147,7 @@
 }
 
 /* Bildschirmbreite kleiner 1500px */
-@media screen and (orientation: landscape) and (max-width: 1500px) {
+@media screen and (max-width: 1500px) {
 
     #about_content {
         padding: 30px 0px;

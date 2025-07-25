@@ -31,6 +31,40 @@ function addClickEventsToMenuItems() {
 addClickEventsToMenuItems();
 
 // ================================================================
+function mobileNavigationSlide() {
+
+    /*
+    Beim Klicke auf das Burger-Navigation-Symbol soll das Nivationsmenü
+    sichtbar werden.
+    */
+
+    const burgerNavigationButton = document.querySelector('#burgerNavigationButton');
+    const navigationLinksContainer = document.querySelector('.nav-links');
+    const navigationLinks = document.querySelectorAll('.nav-links li');
+
+    console.log(navigationLinks);
+
+    /* Navigation-bar Toggle */
+    burgerNavigationButton.addEventListener('click', () => {
+        navigationLinksContainer.classList.toggle('nav-links-active');
+
+        /* Animate links */
+        navigationLinks.forEach((item, idx) => {
+            if (item.style.animation) {
+                item.style.animation = '';
+            }
+            else {
+                item.style.animation = `nav-links-appearance 0.5s ease forwards ${idx / 7 + 0.3}s`;
+            }
+
+        });
+    });
+
+
+}
+mobileNavigationSlide();
+
+// ================================================================
 function changeStyleOfNavigationBar() {
 
     /*
@@ -98,9 +132,9 @@ function initializeAboutAnimations() {
 
     t1.from('#about_darkbox', { x: -100, y: -100, opacity: 0, duration: 0.8 });
     t2.from('#about_whitebox', { x: 100, y: 100, opacity: 0, duration: 0.8 })
-      .from('#about_content_box_left', {y: 20, opacity: 0, duration: 0.3})
-      .from('#about_content_box_center', {y: 20, opacity: 0, duration: 0.3})
-      .from('#about_content_box_right', {y: 20, opacity: 0, duration: 0.3})
+        .from('#about_content_box_left', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_content_box_center', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_content_box_right', { y: 20, opacity: 0, duration: 0.3 })
 }
 initializeAboutAnimations();
 

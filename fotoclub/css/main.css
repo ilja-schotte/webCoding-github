@@ -69,3 +69,25 @@ a {
     }
 
 }
+
+/* extended mobile */
+@media screen and (max-width: 1000px){
+
+    .section_main {
+        height: calc(80% - 20%);    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        margin-top: 20%;
+        min-width: none;
+
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 800px){
+
+    .section_main {
+        height: calc(80% - 20%);    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        margin-top: 20%;
+        min-width: 0;
+
+    }
+}
