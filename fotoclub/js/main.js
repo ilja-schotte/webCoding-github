@@ -42,8 +42,6 @@ function mobileNavigationSlide() {
     const navigationLinksContainer = document.querySelector('.nav-links');
     const navigationLinks = document.querySelectorAll('.nav-links li');
 
-    console.log(navigationLinks);
-
     /* Navigation-bar Toggle */
     burgerNavigationButton.addEventListener('click', () => {
         navigationLinksContainer.classList.toggle('nav-links-active');
@@ -58,6 +56,9 @@ function mobileNavigationSlide() {
             }
 
         });
+
+        burgerNavigationButton.classList.toggle('burger-line-toggle');
+
     });
 
 
@@ -75,23 +76,45 @@ function changeStyleOfNavigationBar() {
     const header = document.querySelector('#logo-text');
     const landing = document.querySelector('#landing');
     const navMenuItems = document.querySelectorAll('.navMenuItem');
-    const landingSectionOptions = {};
+    const navBurgerLines = document.querySelectorAll('.burger div');
+
+    const landingSectionOptions = {
+        rootMargin: "-100px 0px 0px 0px"
+    };
+
+
     const landingSectionObserver = new IntersectionObserver(function (
         entries,
         landingSectionObserver
     ) {
+
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                header.classList.remove('dark-mode');
+
+                /* ======== Logo und Nav-Einträge ========= */
+                header.classList.remove('dark-mode-color');
                 navMenuItems.forEach(navMenuItem => {
-                    navMenuItem.classList.remove('dark-mode');
+                    navMenuItem.classList.remove('dark-mode-color');
                 });
+                /*==========================================*/
+                /* ======= Linien des Burger-Menüs =========*/
+                navBurgerLines.forEach((line) => {
+                    line.classList.remove('dark-mode-background');
+                });
+                /*==========================================*/                
             }
             else {
-                header.classList.add('dark-mode');
+                /* ======== Logo und Nav-Einträge ========= */
+                header.classList.add('dark-mode-color');
                 navMenuItems.forEach(navMenuItem => {
-                    navMenuItem.classList.add('dark-mode');
+                    navMenuItem.classList.add('dark-mode-color');
                 });
+                /*==========================================*/
+                /* ======= Linien des Burger-Menüs =========*/
+                navBurgerLines.forEach((line) => {
+                    line.classList.add('dark-mode-background');
+                });
+                /*==========================================*/ 
             }
         });
     }, landingSectionOptions);
@@ -117,7 +140,7 @@ function initializeAboutAnimations() {
     let t1 = gsap.timeline({
         scrollTrigger: {
             trigger: '#about',
-            start: "500",
+            start: "top 80%",
             scroller: "main"
         },
     });
@@ -125,7 +148,7 @@ function initializeAboutAnimations() {
     let t2 = gsap.timeline({
         scrollTrigger: {
             trigger: '#about',
-            start: "500",
+            start: "top 80%",
             scroller: "main"
         },
     });

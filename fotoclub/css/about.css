@@ -174,4 +174,36 @@
 }
 
 
-/* Bildschirmbreite kleiner 1000px */
+/* Bildschirmbreite kleiner 800px */
+@media screen and (max-width: 800px) {
+
+    #about_section_main {
+        width: 100%;
+        min-width: 0;
+        height: 200vh;
+    }
+
+    #about_content {
+        flex-direction: column;
+    }
+
+    .about_content_boxes {
+        width: 100%;
+        padding: 0px 30px;
+    }
+
+    #about_content_box_left {
+        padding-left: 0px;
+    }
+
+    #about_content_box_center {
+        padding: 0px;
+        line-height: 25px;
+        font-size: 0.7vw;
+    }
+
+    #about_content_box_right {
+        padding-right: 0px;
+    }
+
+}

@@ -110,3 +110,48 @@
     }
 }
 
+/* Bildschirmbreite kleiner 1000px */
+/* extented mobile */
+@media screen and (max-width: 1000px) {
+
+    #landing_text h1 {
+        font-size: clamp(2.8rem, 1.8vw, 3.7rem);
+    }
+
+    #landing_text h2 {
+        font-size: clamp(2rem, 1.3vw, 2.7rem);
+    }
+
+    #landing_text h3 {
+        font-size: clamp(1rem, 0.5vw, 1rem);
+    }
+
+    #landing_text i {
+        font-size: 1rem;
+    }
+}
+
+/* Bildschirmbreite kleiner 800px */
+/* mobile */
+@media screen and (max-width: 800px) {
+
+    #landing_text h1 {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+        line-height: clamp(50px, 3vw, 80px);
+    }
+
+    #landing_text h2 {
+        font-size: clamp(1.0rem, 4vw, 1.75rem);
+        line-height: clamp(50px, 3vw, 80px);
+    }
+
+    #landing_text h3 {
+        font-size: clamp(0.75rem, 0.5vw, 1rem);
+    }
+
+
+
+    #landing_text i {
+        font-size: 1rem;
+    }
+}
