@@ -155,9 +155,9 @@ function initializeAboutAnimations() {
 
     t1.from('#about_darkbox', { x: -100, y: -100, opacity: 0, duration: 0.8 });
     t2.from('#about_whitebox', { x: 100, y: 100, opacity: 0, duration: 0.8 })
-        .from('#about_content_box_left', { y: 20, opacity: 0, duration: 0.3 })
-        .from('#about_content_box_center', { y: 20, opacity: 0, duration: 0.3 })
-        .from('#about_content_box_right', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_content_box_image', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_content_box_text', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_content_box_swiper', { y: 20, opacity: 0, duration: 0.3 });
 }
 initializeAboutAnimations();
 
