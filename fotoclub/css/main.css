@@ -36,6 +36,7 @@ a {
     width: 75vw;
     min-width: 2000px;
     height: 40vw;
+    max-height: 100vh;
     margin: auto;
 }
 
@@ -71,7 +72,9 @@ a {
 @media screen and ((max-width: 1000px) or (orientation: portrait)){
 
     .section_main {
-        height: 60%;    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        height: 90%;    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        max-height: 100vh;
+        max-width: 800px;
     }
 }
 

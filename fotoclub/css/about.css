@@ -43,7 +43,7 @@
     letter-spacing: 8px;
 }
 
-#about_content {
+#about_whitebox_content {
     display: flex;
     flex-direction: row;
     height: 95%;
@@ -53,23 +53,24 @@
     box-shadow: 10px 10px 50px -15px rgb(207, 207, 207);
 }
 
-.about_content_boxes {
+.about_whitebox_content_boxes {
     display: flex;
     width: calc(100% / 3);
     height: auto;
 }
 
-#about_content_box_image {
+#about_whitebox_content_box_image {
     padding-left: 100px;
 }
 
-#about_content_box_image img {
+#about_whitebox_content_box_image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    content: url("../media/group_vertical_600x800.JPG");
 }
 
-#about_content_box_text {
+#about_whitebox_content_box_text {
     font-size: 0.5vw;
     font-weight: 300;
     line-height: 40px;
@@ -77,7 +78,7 @@
     text-align: justify;
 }
 
-#about_content_box_swiper {
+#about_whitebox_content_box_swiper {
     padding-right: 100px;
 }
 
@@ -95,7 +96,7 @@
 /* Bildschirmbreite kleiner 3000px */
 @media screen and (max-width: 3000px) {
 
-    #about_content {
+    #about_whitebox_content {
         padding: 70px 0px;
     }
 
@@ -103,17 +104,17 @@
         font-size: clamp(2rem, 1.4vw, 3.5rem);
     }
 
-    #about_content_box_image {
+    #about_whitebox_content_box_image {
         padding-left: 70px;
     }
 
-    #about_content_box_text {
+    #about_whitebox_content_box_text {
         padding: 0px 70px;
         line-height: 30px;
         font-size: 0.6vw;
     }
 
-    #about_content_box_swiper {
+    #about_whitebox_content_box_swiper {
         padding-right: 70px;
     }
 
@@ -122,7 +123,7 @@
 /* Bildschirmbreite kleiner 2000px */
 @media screen and (max-width: 2000px) {
 
-    #about_content {
+    #about_whitebox_content {
         padding: 40px 0px;
     }
 
@@ -132,17 +133,17 @@
         font-size: clamp(1.5rem, 1.4vw, 2rem);
     }
 
-    #about_content_box_image {
+    #about_whitebox_content_box_image {
         padding-left: 40px;
     }
 
-    #about_content_box_text {
+    #about_whitebox_content_box_text {
         padding: 0px 40px;
         line-height: 25px;
         font-size: 0.7vw;
     }
 
-    #about_content_box_swiper {
+    #about_whitebox_content_box_swiper {
         padding-right: 40px;
     }
 
@@ -151,7 +152,7 @@
 /* Bildschirmbreite kleiner 1500px */
 @media screen and (max-width: 1500px) {
 
-    #about_content {
+    #about_whitebox_content {
         padding: 30px 0px;
     }
 
@@ -159,19 +160,72 @@
         font-size: 1.5vh;
     }
 
-    #about_content_box_image {
+    #about_whitebox_content_box_image {
         padding-left: 30px;
     }
 
-    #about_content_box_text {
+    #about_whitebox_content_box_text {
         padding: 0px 30px;
         line-height: 15px;
         font-size: 0.7vw;
     }
 
-    #about_content_box_swiper {
+    #about_whitebox_content_box_swiper {
         padding-right: 30px;
     }
+
+}
+
+/* Bildschirmbreite kleiner 1000px */
+/* extended mobile */
+@media screen and ((max-width: 1000px) or (orientation: portrait)) {
+
+    #about {
+        height: 100vh;
+        padding: 100px 0 0 0;
+    }
+
+    #about_section_main {
+        height: 100%;
+        margin: auto;
+    }
+
+    #about_whitebox {
+        height: 97.5%;
+    }
+
+    #about_whitebox_content {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .about_whitebox_content_boxes {
+        width: 100%;
+        align-items: center;
+    }
+
+    #about_whitebox_content_box_image {
+        padding: 0;
+        height: 30%;
+    }
+
+    #about_whitebox_content_box_image img {
+        content: url("../media/group_hori_1000x650.JPG");
+    }
+
+    #about_whitebox_content_box_text {
+        line-height: 35px;
+        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
+        padding: 30px 0 30px 0;
+        height: 30%;
+    }
+
+     #about_whitebox_content_box_swiper {
+        padding: 0px;
+        height: 40%;
+        width: 60%;
+    }   
 
 }
 
@@ -191,7 +245,7 @@
         margin: 0;
     }
 
-    #about_content {
+    #about_whitebox_content {
         height: auto;
         flex-direction: column;
         padding: 5%;
@@ -215,24 +269,29 @@
         font-size: 1.5rem;
     }
 
-    .about_content_boxes {
+    .about_whitebox_content_boxes {
         width: 100%;
+        max-width: 100%;
         padding: 0px 30px;
     }
 
-    #about_content_box_image {
+    #about_whitebox_content_box_image {
         height: 30vh;
         padding: 0;
     }
 
-    #about_content_box_text {
+    #about_whitebox_content_box_image img {
+        content: url("../media/group_vertical_600x800.JPG");
+    }
+
+    #about_whitebox_content_box_text {
         height: calc(100% / 3);
         padding: 5% 0 0 0;
         line-height: 25px;
         font-size: 1rem;
     }
 
-    #about_content_box_swiper {
+    #about_whitebox_content_box_swiper {
         display: none;
         padding-right: 0px;
     }
