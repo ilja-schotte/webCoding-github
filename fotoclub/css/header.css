@@ -96,10 +96,11 @@ nav {
 }
 
 
+/*################################## HORIZONTAL ##################################*/
+/*################################################################################*/
 
-
-/* Bildschirmbreite kleiner 3000px */
-@media screen and (max-width: 3000px) {
+/* Bildschirmbreite kleiner 3000px und Ausrichtung horizontal */
+@media screen and ((max-width: 3000px) and (orientation: landscape)){
 
     nav {
         min-width: 1500px;
@@ -115,8 +116,8 @@ nav {
 
 }
 
-/* Bildschirmbreite kleiner 2000px */
-@media screen and (max-width: 2000px) {
+/* Bildschirmbreite kleiner 2000px und Ausrichtung horizontal */
+@media screen and ((max-width: 2000px) and (orientation: landscape)){
 
     nav {
         min-width: 1000px;
@@ -138,8 +139,8 @@ nav {
 
 }
 
-/* Bildschirmbreite kleiner 1500px */
-@media screen and (max-width: 1500px) {
+/* Bildschirmbreite kleiner 1500px und Ausrichtung horizontal */
+@media screen and ((max-width: 1500px) and (orientation: landscape)){
 
     nav {
         min-width: 800px;
@@ -161,9 +162,9 @@ nav {
 
 }
 
-/* Bildschirmbreite kleiner 1000px */
+/* Bildschirmbreite kleiner 1000px und Ausrichtung horizontal */
 /* extended mobile */
-@media screen and (max-width: 1000px) {
+@media screen and ((max-width: 1000px) and (orientation: landscape)){
 
     .nav-links {
         max-width: 600px;
@@ -180,8 +181,8 @@ nav {
 
 }
 
-/* Bildschirmbreite kleiner 800px */
-/* extended mobile */
+/* Bildschirmbreite kleiner 800px*/
+/* mobile */
 @media screen and (max-width: 800px) {
 
     nav{
@@ -232,6 +233,99 @@ nav {
         cursor: pointer;
     }
 }
+
+/*################################### VERTIKAL ###################################*/
+/*################################################################################*/
+
+/* Bildschirmbreite kleiner 3000px und Ausrichtung horizontal */
+@media screen and ((max-width: 3000px) and (orientation: portrait)){
+
+    nav {
+        width: 80vw;
+        max-width: 2000px;
+        min-width: 1500px;
+    }
+
+    #logo-text {
+        font-size: 1.7rem;
+    }
+
+    .navMenuItem {
+        font-size: 1.1rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 2000px und Ausrichtung horizontal */
+@media screen and ((max-width: 2000px) and (orientation: portrait)){
+
+    nav {
+        width: 80vw;
+        max-width: 1500px;
+        min-width: 1000px;
+    }
+
+    #logo-text {
+        font-size: 1.35rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .nav-links {
+        min-width: 500px;
+        max-width: 700px;
+    }
+
+    .navMenuItem {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1500px und Ausrichtung horizontal */
+@media screen and ((max-width: 1500px) and (orientation: portrait)){
+
+    nav {
+        width: 80vw;
+        max-width: 1000px;
+        min-width: 800px;
+    }
+
+    #logo-text {
+        font-size: 1.25rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .nav-links {
+        min-width: 500px;
+        max-width: 600px;
+    }
+
+    .navMenuItem {
+        font-size: 1rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1000px und Ausrichtung horizontal */
+/* extended mobile */
+@media screen and ((max-width: 1000px) and (orientation: portrait)){
+
+    .nav-links {
+        min-width: 400px;
+        max-width: 500px;
+    }
+
+    #logo-text {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .navMenuItem {
+        font-size: 0.8rem;
+    }
+
+}
+
 
 @keyframes nav-links-appearance {
     from {

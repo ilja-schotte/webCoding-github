@@ -101,7 +101,7 @@ function changeStyleOfNavigationBar() {
                 navBurgerLines.forEach((line) => {
                     line.classList.remove('dark-mode-background');
                 });
-                /*==========================================*/                
+                /*==========================================*/
             }
             else {
                 /* ======== Logo und Nav-Einträge ========= */
@@ -114,7 +114,7 @@ function changeStyleOfNavigationBar() {
                 navBurgerLines.forEach((line) => {
                     line.classList.add('dark-mode-background');
                 });
-                /*==========================================*/ 
+                /*==========================================*/
             }
         });
     }, landingSectionOptions);
@@ -155,9 +155,9 @@ function initializeAboutAnimations() {
 
     t1.from('#about_darkbox', { x: -100, y: -100, opacity: 0, duration: 0.8 });
     t2.from('#about_whitebox', { x: 100, y: 100, opacity: 0, duration: 0.8 })
-        .from('#about_content_box_image', { y: 20, opacity: 0, duration: 0.3 })
-        .from('#about_content_box_text', { y: 20, opacity: 0, duration: 0.3 })
-        .from('#about_content_box_swiper', { y: 20, opacity: 0, duration: 0.3 });
+        .from('#about_whitebox_content_box_image', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_whitebox_content_box_text', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_whitebox_content_box_swiper', { y: 20, opacity: 0, duration: 0.3 });
 }
 initializeAboutAnimations();
 
@@ -166,10 +166,12 @@ function initializeAboutSwiperJS() {
     var swiper = new Swiper(".mySwiper", {
         direction: 'horizontal',
         slidesPerView: 2,
+        speed: 900,
+        freeMode: true, 
         grid: {
             rows: 2,
         },
-        spaceBetween: 30,
+        spaceBetween: 40,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -178,6 +180,36 @@ function initializeAboutSwiperJS() {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            800: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 1,
+                }
+            },
+            1000: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2
+                }
+            },
+            1500: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2
+                }
+            },
+            2000: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2
+                }
+            }
+        }
     });
 }
 initializeAboutSwiperJS();

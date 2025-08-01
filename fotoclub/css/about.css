@@ -53,6 +53,12 @@
     box-shadow: 10px 10px 50px -15px rgb(207, 207, 207);
 }
 
+#about_whitebox_content_vertical_wrapper {
+    display: flex;
+    width: auto;
+    padding: 0 100px;
+}
+
 .about_whitebox_content_boxes {
     display: flex;
     width: calc(100% / 3);
@@ -60,7 +66,8 @@
 }
 
 #about_whitebox_content_box_image {
-    padding-left: 100px;
+    width: 50%;
+    padding: 0;
 }
 
 #about_whitebox_content_box_image img {
@@ -71,11 +78,12 @@
 }
 
 #about_whitebox_content_box_text {
-    font-size: 0.5vw;
+    font-size: 0.6vw;
     font-weight: 300;
     line-height: 40px;
-    padding: 0px 100px;
     text-align: justify;
+    padding: 0 0 0 100px;
+    width: 50%;
 }
 
 #about_whitebox_content_box_swiper {
@@ -93,11 +101,20 @@
     width: 100%;
 }
 
-/* Bildschirmbreite kleiner 3000px */
-@media screen and (max-width: 3000px) {
+/*################################## HORIZONTAL ##################################*/
+/*################################################################################*/
+
+/* Bildschirmbreite kleiner 3000px und Ausrichtung horizontal */
+@media screen and ((max-width: 3000px) and (orientation: landscape)) {
 
     #about_whitebox_content {
         padding: 70px 0px;
+    }
+
+    #about_whitebox_content_vertical_wrapper {
+        display: flex;
+        width: auto;
+        padding: 0 70px;
     }
 
     #about_whitebox h1 {
@@ -105,11 +122,13 @@
     }
 
     #about_whitebox_content_box_image {
-        padding-left: 70px;
+        width: 50%;
+        padding: 0;
     }
 
     #about_whitebox_content_box_text {
-        padding: 0px 70px;
+        padding: 0 0 0 70px;
+        width: 50%;
         line-height: 30px;
         font-size: 0.6vw;
     }
@@ -120,11 +139,17 @@
 
 }
 
-/* Bildschirmbreite kleiner 2000px */
-@media screen and (max-width: 2000px) {
+/* Bildschirmbreite kleiner 2000px und Ausrichtung horizontal */
+@media screen and ((max-width: 2000px) and (orientation: landscape)) {
 
     #about_whitebox_content {
         padding: 40px 0px;
+    }
+
+    #about_whitebox_content_vertical_wrapper {
+        display: flex;
+        width: auto;
+        padding: 0 40px;
     }
 
     #about_whitebox h1 {
@@ -133,39 +158,35 @@
         font-size: clamp(1.5rem, 1.4vw, 2rem);
     }
 
-    #about_whitebox_content_box_image {
-        padding-left: 40px;
-    }
-
     #about_whitebox_content_box_text {
-        padding: 0px 40px;
-        line-height: 25px;
-        font-size: 0.7vw;
+        padding: 0 0 0 40px;
     }
 
-    #about_whitebox_content_box_swiper {
+        #about_whitebox_content_box_swiper {
         padding-right: 40px;
     }
 
 }
 
-/* Bildschirmbreite kleiner 1500px */
-@media screen and (max-width: 1500px) {
+/* Bildschirmbreite kleiner 1500px und Ausrichtung horizontal */
+@media screen and ((max-width: 1500px) and (orientation: landscape)) {
 
     #about_whitebox_content {
         padding: 30px 0px;
+    }
+
+    #about_whitebox_content_vertical_wrapper {
+        display: flex;
+        width: auto;
+        padding: 0 30px;
     }
 
     #about_whitebox h1 {
         font-size: 1.5vh;
     }
 
-    #about_whitebox_content_box_image {
-        padding-left: 30px;
-    }
-
     #about_whitebox_content_box_text {
-        padding: 0px 30px;
+        padding: 0 0 0 30px;
         line-height: 15px;
         font-size: 0.7vw;
     }
@@ -176,9 +197,9 @@
 
 }
 
-/* Bildschirmbreite kleiner 1000px */
+/* Bildschirmbreite kleiner 1000px und Ausrichtung horizontal */
 /* extended mobile */
-@media screen and ((max-width: 1000px) or (orientation: portrait)) {
+@media screen and ((max-width: 1000px) and (orientation: landscape)) {
 
     #about {
         height: 100vh;
@@ -198,6 +219,10 @@
         flex-direction: column;
         align-items: center;
         padding: 30px;
+    }
+
+    #about_whitebox_content_vertical_wrapper {
+        display: none;
     }
 
     .about_whitebox_content_boxes {
@@ -221,13 +246,77 @@
         height: 30%;
     }
 
-     #about_whitebox_content_box_swiper {
+    #about_whitebox_content_box_swiper {
         padding: 0px;
         height: 40%;
         width: 60%;
-    }   
-
+    }
 }
+
+/*################################### VERTIKAL ###################################*/
+/*################################################################################*/
+
+/* Bildschirmbreite kleiner 3000px und Ausrichtung horizontal */
+@media screen and ((max-width: 3000px) and (orientation: portrait)) {
+
+    #about {
+        padding: 100px 0 0 0;
+    }
+
+    #about_section_main {
+        height: 100%;
+    }
+
+    #about_whitebox {
+        height: 97.5%;
+    }
+
+    #about_whitebox h1 {
+        display: flex;
+        align-items: end;
+    }
+
+    #about_whitebox_content {
+        flex-direction: column;
+        padding: 40px 40px;
+        align-items: center;
+    }
+
+    #about_whitebox_content_vertical_wrapper {
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+
+    #about_whitebox_content_box_image {
+        height: auto;
+        width: 50%;
+        padding: 0;
+    }
+
+    #about_whitebox_content_box_text {
+        width: 50%;
+        padding: 0 0 0 40px;
+        font-size: 1rem;
+    }
+
+    #about_whitebox_content_box_swiper {
+        height: 50%;
+        width: 100%;
+        padding: 40px 0 0 0;
+    }
+}
+
+@media screen and ((max-width: 3000px) and (orientation: portrait)) {
+
+    .swiper-slide{
+        min-height: 90% !important;
+    }
+}
+
+
+
 
 
 /* Bildschirmbreite kleiner 800px */
