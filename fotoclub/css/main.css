@@ -114,7 +114,7 @@ a {
     }
 }
 
-/* Bildschirmbreite kleiner 2000px UND horizontal */
+/* Bildschirmbreite kleiner 1500px UND horizontal */
 @media screen and ((orientation: portrait) and (max-width: 1500px)) {
 
     .section_main {
@@ -122,4 +122,14 @@ a {
         max-width: 1000px;
         min-width: 800px;
     }
+}
+
+/* Bildschirmbreite kleiner 800px und orientierung egal:*/
+/* modbile */
+@media screen and (max-width: 800px) and ((orientation: portrait) or (orientation: landscape)){
+
+    .section_main {
+        max-height: none;
+    }
+
 }

@@ -165,13 +165,14 @@ initializeAboutAnimations();
 function initializeAboutSwiperJS() {
     var swiper = new Swiper(".mySwiper", {
         direction: 'horizontal',
+        centeredSlides: false,
+        loop: true,
         slidesPerView: 2,
         speed: 900,
-        freeMode: true, 
         grid: {
             rows: 2,
         },
-        spaceBetween: 40,
+        spaceBetween: 30,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -185,7 +186,7 @@ function initializeAboutSwiperJS() {
                 slidesPerView: 2,
                 spaceBetween: 30,
                 grid: {
-                    rows: 1,
+                    rows: 2,
                 }
             },
             1000: {
