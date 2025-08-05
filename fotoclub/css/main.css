@@ -129,7 +129,10 @@ a {
 @media screen and (max-width: 800px) and ((orientation: portrait) or (orientation: landscape)){
 
     .section_main {
+        max-width: none;
         max-height: none;
+        min-width: 0;
+        width: 90%;
     }
 
 }

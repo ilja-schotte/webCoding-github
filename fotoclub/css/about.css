@@ -5,7 +5,7 @@
     width: 100vw;
     background: linear-gradient(to top, rgba(255, 255, 255, 1), rgba(196, 196, 196, 1));
     scroll-snap-align: start;
-    background: green;
+    background: whitesmoke;
 }
 
 #about_darkbox {
@@ -118,19 +118,20 @@
     }
 
     #about_whitebox_content_box_image {
-        width: 50%;
+        width: calc(100% / 3);
         padding: 0;
     }
 
     #about_whitebox_content_box_text {
         padding: 0 70px 0 70px;
-        width: 50%;
-        line-height: 30px;
-        font-size: 0.6vw;
+        width: calc(100% / 3);
+        line-height: clamp(20px, 1.5vw, 35px);
+        font-size: clamp(0.8rem, 0.6vw, 1.5rem);
     }
 
     #about_whitebox_content_box_swiper {
         padding: 0;
+        width: calc(100% / 3);
     }
 
 }
@@ -167,8 +168,8 @@
 
     #about_whitebox_content_box_text {
         padding: 0 30px 0 30px;
-        line-height: 15px;
-        font-size: 0.7vw;
+        line-height: clamp(15px, 1.5vw, 30px);
+        font-size: clamp(0.4rem, 0.6vw, 0.8rem);
     }
 
     #about_whitebox_content_box_swiper {
@@ -183,11 +184,11 @@
 
     #about {
         height: 100vh;
-        padding: 100px 0 0 0;
+        padding: 0 0 0 0;
     }
 
     #about_section_main {
-        height: 100%;
+        height: 40vw;
         margin: auto;
     }
 
@@ -196,9 +197,9 @@
     }
 
     #about_whitebox_content {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        padding: 30px;
+        padding: 20px;
     }
 
     .about_whitebox_content_boxes {
@@ -208,7 +209,93 @@
 
     #about_whitebox_content_box_image {
         padding: 0;
-        height: 30%;
+        width: calc(100% / 3);
+        height: 100%;
+    }
+
+    #about_whitebox_content_box_image img {
+        content: url("../media/group_vertical_600x800.JPG");
+    }
+
+    #about_whitebox_content_box_text {
+        display: flex;
+        align-items: start;
+        font-size: clamp(0.5rem, 0.8vw, 0.8rem);
+        line-height: clamp(15px, 1vw, 20px);
+        padding: 0 20px 0 20px;
+        height: 100%;
+        width: calc(100% / 3);
+    }
+
+    #about_whitebox_content_box_swiper {
+        padding: 0px;
+        height: 100%;
+        width: calc(100% / 3);
+    }
+}
+
+@media screen and (max-width: 800px) and (orientation: landscape) {
+
+    #about {
+        height: 550vh;
+        max-height: 1900px;
+        min-height: 1600px;
+        padding: 100px 0 0 0;
+    }
+
+    #about_section_main {
+        width: 100%;
+        min-width: 0;
+        height: 100%;
+        margin: 0;
+    }
+
+    #about_whitebox_content {
+        height: 100%;
+        flex-direction: column;
+        padding: 5%;
+        justify-content: start;
+    }
+
+    #about_whitebox {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: end;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        width: 95%;
+        height: 97.5%;
+        opacity: 1;
+        z-index: 2;
+    }
+
+    #about_whitebox h1 {
+        font-size: 1.5rem;
+    }
+
+    #about_whitebox h1 {
+        height: 5%;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: clamp(2rem, 1.4vw, 3.5rem);
+        font-weight: 200;
+        color: white;
+        letter-spacing: 8px;
+    }
+
+    .about_whitebox_content_boxes {
+        width: 100%;
+        max-width: 100%;
+        padding: 0px 30px;
+    }
+
+    #about_whitebox_content_box_image {
+        width: 100%;
+        height: 50%;
+        min-height: 400px;
+        padding: 0;
     }
 
     #about_whitebox_content_box_image img {
@@ -216,17 +303,21 @@
     }
 
     #about_whitebox_content_box_text {
-        line-height: 35px;
-        font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-        padding: 30px 0 30px 0;
-        height: 30%;
+        height: auto;
+        width: 100%;
+        padding: 30px 0 0 0;
+        line-height: clamp(30px, 2.5vh, 40px);
+        font-size: clamp(1rem, 1.1vh, 1.25rem);
     }
 
     #about_whitebox_content_box_swiper {
-        padding: 0px;
-        height: 40%;
-        width: 60%;
+        display: flex;
+        padding: 30px 0 0 0;
+        width: 100%;
+        height: 110vw;
+        max-height: 700px;
     }
+
 }
 
 /*################################### VERTIKAL ###################################*/
@@ -237,11 +328,14 @@
 
     #about {
         padding: 100px 0 0 0;
+        height: 125vh;
+        max-height: 1900px;
     }
 
     #about_section_main {
         height: 100%;
-        min-width: 1000px;
+        max-height: 125vh;
+        margin: auto;
     }
 
     #about_whitebox {
@@ -276,9 +370,9 @@
     #about_whitebox_content_box_text {
         display: flex;
         justify-items: center;
-        height: 20%;
+        height: auto;
         width: 100%;
-        padding: 50px 0 50px 0;
+        padding: 50px 0 0 0;
         margin: 0 auto;
         line-height: 2vh;
         font-size: 1.25rem;
@@ -287,36 +381,66 @@
     #about_whitebox_content_box_swiper {
         display: flex;
         justify-content: start;
-        height: 40%;
-        width: 30vh;
         max-width: 500px;
-        padding: 0;
+        padding-top: 50px;
+        height: auto;
+        width: auto;
     }
 }
 
 @media screen and ((max-width: 1500px) and (orientation: portrait)) {
 
-    #about_whitebox_content {
-        padding: 70px 70px;
-    }
-
-    #about_whitebox_content_box_text {
-        line-height: 2vh;
-        font-size: 1rem;
-        padding: 30px 0 30px 0;
-    }
-}
-
-@media screen and ((max-width: 1000px) and (orientation: portrait)) {
-
-    #about{
+    #about {
         height: 125vh;
+        min-height: 1700px;
+        max-height: 1800px;
     }
 
     #about_section_main {
         width: 100%;
         height: 100%;
-        max-height: 125vh;
+        max-height: 150vh;
+        min-height: 1500px;
+        min-width: 0;
+        margin: auto;
+    }
+
+    #about_whitebox_content {
+        padding: 70px 70px;
+    }
+
+    #about_whitebox_content_box_image {
+        height: 50%;
+        max-height: 500px;
+    }
+
+    #about_whitebox_content_box_text {
+        height: auto;
+        padding: 30px 0 0 0;
+        line-height: clamp(30px, 2.5vh, 40px);
+        font-size: clamp(1rem, 1.1vh, 1.25rem);
+    }
+
+    #about_whitebox_content_box_swiper {
+        height: auto;
+        padding-top: 30px;
+        width: auto;
+    }
+}
+
+@media screen and ((max-width: 1000px) and (orientation: portrait)) {
+
+    #about {
+        height: 150vh;
+        max-height: 1800px;
+        min-height: 1700px;
+    }
+
+    #about_section_main {
+        width: 100%;
+        height: 100%;
+        max-height: 150vh;
+        min-height: 1500px;
         min-width: 0;
         margin: 0;
     }
@@ -330,31 +454,37 @@
     }
 
     #about_whitebox_content {
-        justify-content: space-between;
+        justify-content: start;
     }
 
     #about_whitebox_content_box_image {
-        height: 55vw;
-        max-height: 500px;
+        height: 50%;
+        max-height: 400px;
     }
 
-    #about_whitebox_content_box_text{
-        height: 40vw;
+    #about_whitebox_content_box_text {
+        height: auto;
+        padding: 30px 0 0 0;
+        line-height: clamp(30px, 2.5vh, 40px);
+        font-size: clamp(1rem, 1.1vh, 1.25rem);
     }
 
     #about_whitebox_content_box_swiper {
-        height: 40%;
+        height: auto;
+        padding-top: 30px;
+        width: auto;
     }
 }
 
 
-/* Bildschirmbreite kleiner 800px und orientierung egal:*/
+/* Bildschirmbreite kleiner 800px und orientierung vertikal:*/
 /* modbile */
-@media screen and (max-width: 800px) and ((orientation: portrait) or (orientation: landscape)){
+@media screen and (max-width: 800px) and (orientation: portrait) {
 
     #about {
-        height: 200vh;
-        max-height: 1550px;
+        height: 225vh;
+        max-height: 1700px;
+        min-height: 1600px;
         padding: 100px 0 0 0;
     }
 
@@ -391,6 +521,16 @@
         font-size: 1.5rem;
     }
 
+    #about_whitebox h1 {
+        height: 5%;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: clamp(2rem, 1.4vw, 3.5rem);
+        font-weight: 200;
+        color: white;
+        letter-spacing: 8px;
+    }
+
     .about_whitebox_content_boxes {
         width: 100%;
         max-width: 100%;
@@ -398,9 +538,8 @@
     }
 
     #about_whitebox_content_box_image {
-        height: 30vh;
-        min-height: 180px;
-        max-height: 270px;
+        height: 50%;
+        min-height: 300px;
         padding: 0;
     }
 
@@ -410,15 +549,17 @@
 
     #about_whitebox_content_box_text {
         height: auto;
-        line-height: clamp(25px, 4vh, 35px);
-        font-size: clamp(1rem, 1.5vh, 1rem);
+        padding-top: 30px;
+        line-height: clamp(30px, 2.5vh, 40px);
+        font-size: clamp(1rem, 1.1vh, 1.25rem);
     }
 
     #about_whitebox_content_box_swiper {
         display: flex;
-        padding: 0;
+        padding: 30px 0 0 0;
         width: 100%;
-        height: 450px;
+        height: 110vw;
+        max-height: 700px;
     }
 
 }

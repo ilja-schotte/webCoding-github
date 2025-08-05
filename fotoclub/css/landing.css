@@ -51,7 +51,11 @@
 }
 
 /* Bildschirmbreite kleiner 3000px */
-@media screen and (max-width: 3000px) {
+@media screen and (orientation: landscape) and (max-width: 3000px) {
+
+    #landing_section_main {
+        min-width: 1000px;
+    }
 
     #landing_text {
         margin-top: clamp(50px, 4vw, 120px);
@@ -71,7 +75,11 @@
 }
 
 /* Bildschirmbreite kleiner 2000px */
-@media screen and (max-width: 2000px) {
+@media screen and (orientation: landscape) and (max-width: 2000px) {
+
+    #landing_section_main {
+        min-width: 1000px;
+    }
 
     #landing_text h1 {
         font-size: clamp(2.8rem, 1.8vw, 3.7rem);
@@ -90,8 +98,12 @@
     }
 }
 
-/* Bildschirmbreite kleiner 1500px */
-@media screen and (max-width: 1500px) {
+/* Bildschirmbreite kleiner 1500px UND horizontal */
+@media screen and (orientation: landscape) and (max-width: 1500px) {
+
+    #landing_section_main {
+        min-width: 800px;
+    }
 
     #landing_text h1 {
         font-size: clamp(2.8rem, 1.8vw, 3.7rem);
@@ -110,9 +122,16 @@
     }
 }
 
-/* Bildschirmbreite kleiner 1000px */
-/* extented mobile */
-@media screen and (max-width: 1000px) {
+/* extended mobile */
+/* Bildschirmbreite kleiner 1000px UND horizontal */
+@media screen and (orientation: landscape) and (max-width: 1000px){
+
+    #landing_section_main {
+        height: 70%;        
+        max-height: 100vh;
+        max-width: 800px;
+        min-width: 0;
+    }
 
     #landing_text h1 {
         font-size: clamp(2.8rem, 1.8vw, 3.7rem);
@@ -134,6 +153,12 @@
 /* Bildschirmbreite kleiner 800px */
 /* mobile */
 @media screen and (max-width: 800px) {
+
+    #landing_section_main {
+        height: calc(80% - 20%);    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        margin-top: auto;
+        min-width: 0;
+    }
 
     #landing_text h1 {
         font-size: clamp(1.25rem, 5vw, 2rem);

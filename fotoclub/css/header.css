@@ -166,6 +166,10 @@ nav {
 /* extended mobile */
 @media screen and ((max-width: 1000px) and (orientation: landscape)){
 
+    nav{
+        min-width: 0;
+    }
+
     .nav-links {
         max-width: 600px;
     }
