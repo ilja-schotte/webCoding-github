@@ -122,12 +122,44 @@
     }
 }
 
-/* extended mobile */
-/* Bildschirmbreite kleiner 1000px UND horizontal */
-@media screen and (orientation: landscape) and (max-width: 1000px){
+/* Bildschirmbreite kleiner 3000px */
+@media screen and (orientation: portrait) and (max-width: 3000px) {
+
+    #landing{
+        justify-content: start;
+        align-items: start;
+    }
 
     #landing_section_main {
-        height: 70%;        
+        width: 90%;
+        height: 100%;
+        min-width: 0;
+        margin: 20% auto 20% auto;
+    }
+
+    #landing_text {
+        margin-top: clamp(50px, 4vw, 120px);
+    }
+
+    #landing_text h1 {
+        font-size: clamp(2.8rem, 1.8vw, 3.7rem);
+    }
+
+    #landing_text h2 {
+        font-size: clamp(2rem, 1.3vw, 2.7rem);
+    }
+
+    #landing_text h3 {
+        font-size: clamp(1rem, 0.5vw, 1rem);
+    }
+}
+
+/* extended mobile */
+/* Bildschirmbreite kleiner 1000px UND horizontal */
+@media screen and (orientation: landscape) and (max-width: 1000px) {
+
+    #landing_section_main {
+        height: 70%;
         max-height: 100vh;
         max-width: 800px;
         min-width: 0;
@@ -150,13 +182,45 @@
     }
 }
 
-/* Bildschirmbreite kleiner 800px */
+/* Bildschirmbreite kleiner 800px orientierung horizontal*/
 /* mobile */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) and (orientation: landscape){
 
     #landing_section_main {
-        height: calc(80% - 20%);    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        height: calc(80% - 20%);
+        /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
         margin-top: auto;
+        min-width: 0;
+    }
+
+    #landing_text h1 {
+        font-size: clamp(1.25rem, 5vw, 2rem);
+        line-height: clamp(50px, 3vw, 80px);
+    }
+
+    #landing_text h2 {
+        font-size: clamp(1.0rem, 4vw, 1.75rem);
+        line-height: clamp(50px, 3vw, 80px);
+    }
+
+    #landing_text h3 {
+        font-size: clamp(0.75rem, 0.5vw, 1rem);
+    }
+
+
+
+    #landing_text i {
+        font-size: 1rem;
+    }
+}
+
+/* Bildschirmbreite kleiner 800px orientierung vertikal*/
+/* mobile */
+@media screen and (max-width: 800px) and (orientation: portrait){
+
+    #landing_section_main {
+        padding: 20% 0 20% 0;
+        margin: 0 auto 0 auto;
         min-width: 0;
     }
 

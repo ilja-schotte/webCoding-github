@@ -61,6 +61,28 @@ function mobileNavigationSlide() {
 
     });
 
+    /*
+    Wenn ein Klick auf "main" erfolgt und das mobile Navigationsmenü angezeigt wird, soll es verschwinden.
+    */
+
+    const main_container = document.querySelector('main');
+
+    main_container.addEventListener('click', () => {
+
+        if (Array.from(burgerNavigationButton.classList).includes("burger-line-toggle")) {
+
+            //console.log(' "burger-line-toggle" is in list');
+            //console.log(burgerNavigationButton.classList);
+            burgerNavigationButton.classList.toggle('burger-line-toggle');
+            navigationLinksContainer.classList.toggle('nav-links-active');
+        }
+        else {
+            //console.log(' "burger-line-toggle" not in list');
+            //console.log(burgerNavigationButton.classList);
+        }
+
+    });
+
 
 }
 mobileNavigationSlide();
@@ -166,6 +188,7 @@ function initializeAboutSwiperJS() {
     var swiper = new Swiper(".mySwiper", {
         direction: 'horizontal',
         centeredSlides: false,
+        autoHeight: false,
         loop: true,
         slidesPerView: 2,
         speed: 900,

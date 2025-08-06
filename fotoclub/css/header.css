@@ -192,7 +192,7 @@ nav {
 @media screen and ((max-width: 3000px) and (orientation: portrait)){
 
     nav {
-        width: 80vw;
+        width: 90%;
         max-width: 2000px;
         min-width: 1500px;
     }
@@ -211,7 +211,7 @@ nav {
 @media screen and ((max-width: 2000px) and (orientation: portrait)){
 
     nav {
-        width: 80vw;
+        width: 90%;
         max-width: 1500px;
         min-width: 1000px;
     }
@@ -236,9 +236,9 @@ nav {
 @media screen and ((max-width: 1500px) and (orientation: portrait)){
 
     nav {
-        width: 80vw;
+        width: 90%;
         max-width: 1000px;
-        min-width: 1000px;
+        min-width: 0;
     }
 
     #logo-text {
