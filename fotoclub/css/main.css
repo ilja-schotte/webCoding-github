@@ -5,8 +5,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.dark-mode{
-    color: black !important;
+html {
+    font-size: 14px;
 }
 
 main {
@@ -14,13 +14,125 @@ main {
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
 }
 
-.section_main{
+a {
+    text-decoration: none;
+}
+
+.dark-mode-color {
+    color: black !important;
+}
+
+.dark-mode-background {
+    background: black !important;
+}
+
+.section_main {
     display: flex;
     position: relative;
-    width: 3000px;
-    height: 80%;
+    width: 75vw;
+    min-width: 2000px;
+    height: 40vw;
+    max-height: 100vh;
     margin: auto;
 }
 
+/*################################## HORIZONTAL ##################################*/
+/*################################################################################*/
+
+/* Bildschirmbreite kleiner 3000px UND horizontal */
+@media screen and (orientation: landscape) and (max-width: 3000px) {
+
+    .section_main {
+        min-width: 1500px;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 2000px UND horizontal */
+@media screen and (orientation: landscape) and (max-width: 2000px) {
+
+    .section_main {
+        min-width: 1000px;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1500px UND horizontal */
+@media screen and (orientation: landscape) and (max-width: 1500px) {
+
+    .section_main {
+        min-width: 800px;
+    }
+
+}
+
+/* extended mobile */
+/* Bildschirmbreite kleiner 1000px UND horizontal */
+@media screen and (orientation: landscape) and (max-width: 1000px){
+
+    .section_main {
+        height: 90%;    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        max-height: 100vh;
+        max-width: 800px;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 800px){
+
+    .section_main {
+        height: calc(80% - 20%);    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        margin-top: 20%;
+        min-width: 0;
+    }
+}
+
+/*################################### VERTIKAL ###################################*/
+/*################################################################################*/
+
+/* Bildschirmbreite kleiner 3000px UND horizontal */
+@media screen and ((orientation: portrait) and (max-width: 3000px)) {
+
+    .section_main {
+        width: 80vw;
+        max-width: 2000px;
+        min-width: 1500px;
+    }
+}
+
+/* Bildschirmbreite kleiner 2000px UND horizontal */
+@media screen and ((orientation: portrait) and (max-width: 2000px)) {
+
+    .section_main {
+        width: 80vw;
+        max-width: 1500px;
+        min-width: 1000px;
+    }
+}
+
+/* Bildschirmbreite kleiner 1500px UND horizontal */
+@media screen and ((orientation: portrait) and (max-width: 1500px)) {
+
+    .section_main {
+        width: 80vw;
+        max-width: 1000px;
+        min-width: 800px;
+    }
+}
+
+/* Bildschirmbreite kleiner 800px und orientierung egal:*/
+/* modbile */
+@media screen and (max-width: 800px) and ((orientation: portrait) or (orientation: landscape)){
+
+    .section_main {
+        max-width: none;
+        max-height: none;
+        min-width: 0;
+        width: 90%;
+    }
+
+}

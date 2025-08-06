@@ -1,4 +1,4 @@
-header{
+header {
     display: flex;
     position: fixed;
     height: 100px;
@@ -12,7 +12,8 @@ header{
 
 nav {
     display: flex;
-    width: 3000px;
+    width: 75vw;
+    min-width: 2000px;
     height: 100%;
     justify-content: space-between;
     align-items: center;
@@ -20,23 +21,37 @@ nav {
     background-color: transparent;
 }
 
-.logo h4{
+#logo-text {
     font-size: 2rem;
     letter-spacing: 0.5rem;
     font-weight: 300;
+    color: white;
 }
 
 .nav-links {
     display: flex;
     width: 20vw;
-    min-width: 400px;
-    max-width: 500px;
+    min-width: 600px;
+    max-width: 800px;
     justify-content: space-between;
 
 }
 
 .nav-links li {
     list-style: none;
+}
+
+.nav-links li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-links li i {
+    display: none;
+    font-size: 2rem;
+    margin-bottom: 5px;
 }
 
 .navMenuItem {
@@ -46,4 +61,291 @@ nav {
     font-weight: 300;
     color: white;
     transition: .5s;
+}
+
+.nav-links-active {
+    transform: translateX(0%) !important;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+}
+
+.burger div {
+    width: 30px;
+    height: 3px;
+    background: rgba(266, 266, 266);
+    margin: 3px 0px;
+    transition: all 0.3s ease;
+    border-radius: 1.5px;
+}
+
+/* Klassen zur Linienanimation der Burgerlinien in der Navigationsleiste */
+.burger-line-toggle .line1 {
+    transform: rotate(-45deg) translate(-6.5px, 6px);
+
+}
+
+.burger-line-toggle .line2 {
+    opacity: 0;
+}
+
+.burger-line-toggle .line3 {
+    transform: rotate(45deg) translate(-6.5px, -6px);
+}
+
+
+/*################################## HORIZONTAL ##################################*/
+/*################################################################################*/
+
+/* Bildschirmbreite kleiner 3000px und Ausrichtung horizontal */
+@media screen and ((max-width: 3000px) and (orientation: landscape)){
+
+    nav {
+        min-width: 1500px;
+    }
+
+    #logo-text {
+        font-size: 1.7rem;
+    }
+
+    .navMenuItem {
+        font-size: 1.1rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 2000px und Ausrichtung horizontal */
+@media screen and ((max-width: 2000px) and (orientation: landscape)){
+
+    nav {
+        min-width: 1000px;
+    }
+
+    #logo-text {
+        font-size: 1.35rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .nav-links {
+        min-width: 500px;
+        max-width: 700px;
+    }
+
+    .navMenuItem {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1500px und Ausrichtung horizontal */
+@media screen and ((max-width: 1500px) and (orientation: landscape)){
+
+    nav {
+        min-width: 800px;
+    }
+
+    #logo-text {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .nav-links {
+        min-width: 400px;
+        max-width: 600px;
+    }
+
+    .navMenuItem {
+        font-size: 0.7rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1000px und Ausrichtung horizontal */
+/* extended mobile */
+@media screen and ((max-width: 1000px) and (orientation: landscape)){
+
+    nav{
+        min-width: 0;
+    }
+
+    .nav-links {
+        max-width: 600px;
+    }
+
+    #logo-text {
+        font-size: 1rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .navMenuItem {
+        font-size: 0.7rem;
+    }
+
+}
+
+/*################################### VERTIKAL ###################################*/
+/*################################################################################*/
+
+/* Bildschirmbreite kleiner 3000px und Ausrichtung horizontal */
+@media screen and ((max-width: 3000px) and (orientation: portrait)){
+
+    nav {
+        width: 80vw;
+        max-width: 2000px;
+        min-width: 1500px;
+    }
+
+    #logo-text {
+        font-size: 1.7rem;
+    }
+
+    .navMenuItem {
+        font-size: 1.1rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 2000px und Ausrichtung horizontal */
+@media screen and ((max-width: 2000px) and (orientation: portrait)){
+
+    nav {
+        width: 80vw;
+        max-width: 1500px;
+        min-width: 1000px;
+    }
+
+    #logo-text {
+        font-size: 1.35rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .nav-links {
+        min-width: 500px;
+        max-width: 700px;
+    }
+
+    .navMenuItem {
+        font-size: 0.9rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1500px und Ausrichtung horizontal */
+@media screen and ((max-width: 1500px) and (orientation: portrait)){
+
+    nav {
+        width: 80vw;
+        max-width: 1000px;
+        min-width: 1000px;
+    }
+
+    #logo-text {
+        font-size: 1.25rem;
+        letter-spacing: 0.3rem;
+    }
+
+    .nav-links {
+        min-width: 500px;
+        max-width: 600px;
+    }
+
+    .navMenuItem {
+        font-size: 1rem;
+    }
+
+}
+
+/* Bildschirmbreite kleiner 1000px und Ausrichtung horizontal */
+/* extended mobile */
+@media screen and ((max-width: 1000px) and (orientation: portrait)){
+
+    nav{
+        width: 90%;
+        min-width: 0;
+        max-width: none;
+    }
+
+    .nav-links {
+        min-width: 400px;
+        max-width: 500px;
+    }
+
+    #logo-text {
+        font-size: 1.2rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .navMenuItem {
+        font-size: 0.8rem;
+    }
+}
+
+/* Bildschirmbreite kleiner 800px und orientierung egal:*/
+/* modbile */
+@media screen and (max-width: 800px) and ((orientation: portrait) or (orientation: landscape)){
+
+    nav{
+        width: 90%;
+        min-width: 0;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        display: flex;
+        min-width: 33%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        right: 0px;
+        top: 100px;
+        background: rgba(144, 144, 144, 0.2);
+        backdrop-filter: blur(40px);
+        height: calc(100vh - 100px);
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        border-radius: 1px;
+        font-size: 0.7rem;
+    }
+
+    .nav-links li i {
+        font-size: 1.5rem;
+    }
+
+    .navMenuItem {
+        font-size: 1.25em;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li i {
+        display: block;
+    }
+
+    .burger {
+        display: flex;
+        cursor: pointer;
+    }
+}
+
+
+
+@keyframes nav-links-appearance {
+    from {
+        opacity: 1;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+
 }

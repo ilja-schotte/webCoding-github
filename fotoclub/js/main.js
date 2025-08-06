@@ -31,6 +31,41 @@ function addClickEventsToMenuItems() {
 addClickEventsToMenuItems();
 
 // ================================================================
+function mobileNavigationSlide() {
+
+    /*
+    Beim Klicke auf das Burger-Navigation-Symbol soll das Nivationsmenü
+    sichtbar werden.
+    */
+
+    const burgerNavigationButton = document.querySelector('#burgerNavigationButton');
+    const navigationLinksContainer = document.querySelector('.nav-links');
+    const navigationLinks = document.querySelectorAll('.nav-links li');
+
+    /* Navigation-bar Toggle */
+    burgerNavigationButton.addEventListener('click', () => {
+        navigationLinksContainer.classList.toggle('nav-links-active');
+
+        /* Animate links */
+        navigationLinks.forEach((item, idx) => {
+            if (item.style.animation) {
+                item.style.animation = '';
+            }
+            else {
+                item.style.animation = `nav-links-appearance 0.5s ease forwards ${idx / 7 + 0.3}s`;
+            }
+
+        });
+
+        burgerNavigationButton.classList.toggle('burger-line-toggle');
+
+    });
+
+
+}
+mobileNavigationSlide();
+
+// ================================================================
 function changeStyleOfNavigationBar() {
 
     /*
@@ -38,26 +73,48 @@ function changeStyleOfNavigationBar() {
     der Navigationbar ändern.
     */
 
-    const header = document.querySelector('header');
+    const header = document.querySelector('#logo-text');
     const landing = document.querySelector('#landing');
     const navMenuItems = document.querySelectorAll('.navMenuItem');
-    const landingSectionOptions = {};
+    const navBurgerLines = document.querySelectorAll('.burger div');
+
+    const landingSectionOptions = {
+        rootMargin: "-100px 0px 0px 0px"
+    };
+
+
     const landingSectionObserver = new IntersectionObserver(function (
         entries,
         landingSectionObserver
     ) {
+
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                header.classList.remove('dark-mode');
+
+                /* ======== Logo und Nav-Einträge ========= */
+                header.classList.remove('dark-mode-color');
                 navMenuItems.forEach(navMenuItem => {
-                    navMenuItem.classList.remove('dark-mode');
+                    navMenuItem.classList.remove('dark-mode-color');
                 });
+                /*==========================================*/
+                /* ======= Linien des Burger-Menüs =========*/
+                navBurgerLines.forEach((line) => {
+                    line.classList.remove('dark-mode-background');
+                });
+                /*==========================================*/
             }
             else {
-                header.classList.add('dark-mode');
+                /* ======== Logo und Nav-Einträge ========= */
+                header.classList.add('dark-mode-color');
                 navMenuItems.forEach(navMenuItem => {
-                    navMenuItem.classList.add('dark-mode');
+                    navMenuItem.classList.add('dark-mode-color');
                 });
+                /*==========================================*/
+                /* ======= Linien des Burger-Menüs =========*/
+                navBurgerLines.forEach((line) => {
+                    line.classList.add('dark-mode-background');
+                });
+                /*==========================================*/
             }
         });
     }, landingSectionOptions);
@@ -83,7 +140,7 @@ function initializeAboutAnimations() {
     let t1 = gsap.timeline({
         scrollTrigger: {
             trigger: '#about',
-            start: "500",
+            start: "top 80%",
             scroller: "main"
         },
     });
@@ -91,14 +148,16 @@ function initializeAboutAnimations() {
     let t2 = gsap.timeline({
         scrollTrigger: {
             trigger: '#about',
-            start: "500",
+            start: "top 80%",
             scroller: "main"
         },
     });
 
-    t1.from('#about_darkbox', { x: -100, y: -100, opacity: 0, duration: 1 });
-    t2.from('#about_whitebox', { x: 100, y: 100, opacity: 0, duration: 1 });
-
+    t1.from('#about_darkbox', { x: -100, y: -100, opacity: 0, duration: 0.8 });
+    t2.from('#about_whitebox', { x: 100, y: 100, opacity: 0, duration: 0.8 })
+        .from('#about_whitebox_content_box_image', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_whitebox_content_box_text', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_whitebox_content_box_swiper', { y: 20, opacity: 0, duration: 0.3 });
 }
 initializeAboutAnimations();
 
@@ -106,7 +165,10 @@ initializeAboutAnimations();
 function initializeAboutSwiperJS() {
     var swiper = new Swiper(".mySwiper", {
         direction: 'horizontal',
+        centeredSlides: false,
+        loop: true,
         slidesPerView: 2,
+        speed: 900,
         grid: {
             rows: 2,
         },
@@ -119,6 +181,36 @@ function initializeAboutSwiperJS() {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+        breakpoints: {
+            800: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2,
+                }
+            },
+            1000: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2
+                }
+            },
+            1500: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2
+                }
+            },
+            2000: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+                grid: {
+                    rows: 2
+                }
+            }
+        }
     });
 }
 initializeAboutSwiperJS();
