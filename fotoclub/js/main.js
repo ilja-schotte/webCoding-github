@@ -45,6 +45,8 @@ function mobileNavigationSlide() {
     /* Navigation-bar Toggle */
     burgerNavigationButton.addEventListener('click', () => {
         navigationLinksContainer.classList.toggle('nav-links-active');
+        
+        console.log(navigationLinksContainer.classList);
 
         /* Animate links */
         navigationLinks.forEach((item, idx) => {
@@ -61,6 +63,7 @@ function mobileNavigationSlide() {
 
     });
 
+    
     /*
     Wenn ein Klick auf "main" erfolgt und das mobile Navigationsmenü angezeigt wird, soll es verschwinden.
     */
@@ -69,21 +72,20 @@ function mobileNavigationSlide() {
 
     main_container.addEventListener('click', () => {
 
-        if (Array.from(burgerNavigationButton.classList).includes("burger-line-toggle")) {
+        if (Array.from(navigationLinksContainer.classList).includes("nav-links-active")) {
 
             //console.log(' "burger-line-toggle" is in list');
             //console.log(burgerNavigationButton.classList);
             burgerNavigationButton.classList.toggle('burger-line-toggle');
             navigationLinksContainer.classList.toggle('nav-links-active');
-        }
-        else {
-            //console.log(' "burger-line-toggle" not in list');
-            //console.log(burgerNavigationButton.classList);
-        }
 
+            navigationLinks.forEach((item, idx) => {
+                if (item.style.animation) {
+                    item.style.animation = '';
+                }
+            });
+        }
     });
-
-
 }
 mobileNavigationSlide();
 
