@@ -81,6 +81,12 @@ nav {
     border-radius: 1.5px;
 }
 
+#nav-pointer{
+    position: absolute;
+    z-index: -2;
+    background: red;
+}
+
 /* Klassen zur Linienanimation der Burgerlinien in der Navigationsleiste */
 .burger-line-toggle .line1 {
     transform: rotate(-45deg) translate(-6.5px, 6px);
@@ -94,6 +100,8 @@ nav {
 .burger-line-toggle .line3 {
     transform: rotate(45deg) translate(-6.5px, -6px);
 }
+
+
 
 
 /*################################## HORIZONTAL ##################################*/

@@ -90,6 +90,32 @@ function mobileNavigationSlide() {
 mobileNavigationSlide();
 
 // ================================================================
+function showCurrentSectionInNavigationBar() {
+
+    const sections = document.querySelectorAll('section')
+    const navPointer = document.querySelector('#nav-pointer');
+    
+    const options = {
+        threshold: 0.7
+    };
+
+    const sectionsObserver = new IntersectionObserver(navCheck, options);
+
+    function navCheck(entries){
+        entries.forEach(entry => {
+            console.log(entry.target.id);
+        });
+    }
+
+    sections.forEach(section => {
+        sectionsObserver.observe(section)
+
+    });
+
+}
+showCurrentSectionInNavigationBar();
+
+// ================================================================
 function changeStyleOfNavigationBar() {
 
     /*
@@ -101,6 +127,8 @@ function changeStyleOfNavigationBar() {
     const landing = document.querySelector('#landing');
     const navMenuItems = document.querySelectorAll('.navMenuItem');
     const navBurgerLines = document.querySelectorAll('.burger div');
+   
+
 
     const landingSectionOptions = {
         rootMargin: "-100px 0px 0px 0px"

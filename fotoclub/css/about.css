@@ -51,7 +51,7 @@
     width: 100%;
     background: white;
     padding: 100px 100px;
-    box-shadow: 10px 10px 50px -15px rgb(207, 207, 207);
+    box-shadow: 0px 0px 1000px rgb(207, 207, 207);
 }
 
 .about_whitebox_content_boxes {
@@ -85,23 +85,6 @@
     padding-right: 0px;
 }
 
-.swiper-slide-header {
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    background: white;
-    height: 50%;
-    width: 100%;
-    color: rgb(196, 196, 196);
-    padding-bottom: 30px;
-}
-
-
-
-.swiper-slide-footer {
-    height: 50%;
-    width: 100%;
-}
 
 /*################################## HORIZONTAL ##################################*/
 /*################################################################################*/
@@ -383,7 +366,8 @@
         justify-content: start;
         max-width: 500px;
         padding-top: 50px;
-        height: auto;
+        height: 45%;
+        max-height: 45%;
         width: auto;
     }
 }
@@ -422,7 +406,7 @@
     }
 
     #about_whitebox_content_box_swiper {
-        height: auto;
+        height: 45%;
         padding-top: 30px;
         width: auto;
     }
@@ -470,7 +454,7 @@
     }
 
     #about_whitebox_content_box_swiper {
-        height: auto;
+        height: 45%;
         padding-top: 30px;
         width: auto;
     }
