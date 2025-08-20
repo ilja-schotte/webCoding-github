@@ -55,12 +55,19 @@ nav {
 }
 
 .navMenuItem {
+    position: relative;
     text-decoration: none;
     letter-spacing: 3px;
     font-size: 1.25rem;
     font-weight: 300;
     color: white;
     transition: .5s;
+}
+
+.navMenuItem-pointer{
+    position: absolute;
+    height: 100%;
+    border-bottom: 1px solid;
 }
 
 .nav-links-active {
@@ -81,11 +88,7 @@ nav {
     border-radius: 1.5px;
 }
 
-#nav-pointer{
-    position: absolute;
-    z-index: -2;
-    background: red;
-}
+
 
 /* Klassen zur Linienanimation der Burgerlinien in der Navigationsleiste */
 .burger-line-toggle .line1 {
@@ -108,7 +111,7 @@ nav {
 /*################################################################################*/
 
 /* Bildschirmbreite kleiner 3000px und Ausrichtung horizontal */
-@media screen and ((max-width: 3000px) and (orientation: landscape)){
+@media screen and ((max-width: 3000px) and (orientation: landscape)) {
 
     nav {
         min-width: 1500px;
@@ -125,7 +128,7 @@ nav {
 }
 
 /* Bildschirmbreite kleiner 2000px und Ausrichtung horizontal */
-@media screen and ((max-width: 2000px) and (orientation: landscape)){
+@media screen and ((max-width: 2000px) and (orientation: landscape)) {
 
     nav {
         min-width: 1000px;
@@ -148,7 +151,7 @@ nav {
 }
 
 /* Bildschirmbreite kleiner 1500px und Ausrichtung horizontal */
-@media screen and ((max-width: 1500px) and (orientation: landscape)){
+@media screen and ((max-width: 1500px) and (orientation: landscape)) {
 
     nav {
         min-width: 800px;
@@ -172,9 +175,9 @@ nav {
 
 /* Bildschirmbreite kleiner 1000px und Ausrichtung horizontal */
 /* extended mobile */
-@media screen and ((max-width: 1000px) and (orientation: landscape)){
+@media screen and ((max-width: 1000px) and (orientation: landscape)) {
 
-    nav{
+    nav {
         min-width: 0;
     }
 
@@ -197,7 +200,7 @@ nav {
 /*################################################################################*/
 
 /* Bildschirmbreite kleiner 3000px und Ausrichtung horizontal */
-@media screen and ((max-width: 3000px) and (orientation: portrait)){
+@media screen and ((max-width: 3000px) and (orientation: portrait)) {
 
     nav {
         width: 90%;
@@ -216,7 +219,7 @@ nav {
 }
 
 /* Bildschirmbreite kleiner 2000px und Ausrichtung horizontal */
-@media screen and ((max-width: 2000px) and (orientation: portrait)){
+@media screen and ((max-width: 2000px) and (orientation: portrait)) {
 
     nav {
         width: 90%;
@@ -241,7 +244,7 @@ nav {
 }
 
 /* Bildschirmbreite kleiner 1500px und Ausrichtung horizontal */
-@media screen and ((max-width: 1500px) and (orientation: portrait)){
+@media screen and ((max-width: 1500px) and (orientation: portrait)) {
 
     nav {
         width: 90%;
@@ -267,9 +270,9 @@ nav {
 
 /* Bildschirmbreite kleiner 1000px und Ausrichtung horizontal */
 /* extended mobile */
-@media screen and ((max-width: 1000px) and (orientation: portrait)){
+@media screen and ((max-width: 1000px) and (orientation: portrait)) {
 
-    nav{
+    nav {
         width: 90%;
         min-width: 0;
         max-width: none;
@@ -292,9 +295,9 @@ nav {
 
 /* Bildschirmbreite kleiner 800px und orientierung egal:*/
 /* modbile */
-@media screen and (max-width: 800px) and ((orientation: portrait) or (orientation: landscape)){
+@media screen and (max-width: 800px) and ((orientation: portrait) or (orientation: landscape)) {
 
-    nav{
+    nav {
         width: 90%;
         min-width: 0;
     }
@@ -354,6 +357,28 @@ nav {
     to {
         opacity: 1;
         transform: translateX(0px);
+    }
+
+}
+
+@keyframes navMenuItem-pointer-appear{
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+@keyframes navMenuItem-pointer-disappear{
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0%;
     }
 
 }

@@ -45,7 +45,7 @@ function mobileNavigationSlide() {
     /* Navigation-bar Toggle */
     burgerNavigationButton.addEventListener('click', () => {
         navigationLinksContainer.classList.toggle('nav-links-active');
-        
+
         console.log(navigationLinksContainer.classList);
 
         /* Animate links */
@@ -63,7 +63,7 @@ function mobileNavigationSlide() {
 
     });
 
-    
+
     /*
     Wenn ein Klick auf "main" erfolgt und das mobile Navigationsmenü angezeigt wird, soll es verschwinden.
     */
@@ -93,17 +93,27 @@ mobileNavigationSlide();
 function showCurrentSectionInNavigationBar() {
 
     const sections = document.querySelectorAll('section')
-    const navPointer = document.querySelector('#nav-pointer');
-    
+    const navPointerContainer = document.querySelector('#nav-pointer-container');
+
     const options = {
-        threshold: 0.7
+        //rootMargin: "30% 0% 0% 0%",
+        threshold: '0.5'
     };
 
-    const sectionsObserver = new IntersectionObserver(navCheck, options);
+    let sectionsObserver = new IntersectionObserver(navCheck, options);
 
-    function navCheck(entries){
+    function navCheck(entries) {
         entries.forEach(entry => {
-            console.log(entry.target.id);
+            const currentSectionId = entry.target.id;
+            const activeAnchor = document.querySelector(`[data-sectionname=${currentSectionId}]`)
+
+            if (entry.isIntersecting) {
+                activeAnchor.querySelector('.navMenuItem-pointer').style.animation = `navMenuItem-pointer-appear 0.5s ease forwards`;
+            }
+            else{
+                activeAnchor.querySelector('.navMenuItem-pointer').style.animation = `navMenuItem-pointer-disappear 0.5s ease forwards`;
+            }
+
         });
     }
 
@@ -127,7 +137,7 @@ function changeStyleOfNavigationBar() {
     const landing = document.querySelector('#landing');
     const navMenuItems = document.querySelectorAll('.navMenuItem');
     const navBurgerLines = document.querySelectorAll('.burger div');
-   
+
 
 
     const landingSectionOptions = {
