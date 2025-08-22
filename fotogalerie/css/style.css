@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+main {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery {
+    display: flex;
+    width: 60%;
+    height: 60%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery .images {
+    width: 100%;
+    column-count: 6;
+    /*max number of columns*/
+    column-width: 150px;
+    /*min-width of each column*/
+    gap: 10px;
+    /*gap between each column*/
+}
+
+.images .card {
+    position: relative;
+    list-style: none;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+    line-height: 0px;
+}
+
+.images .card .image-details {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    line-height: 1rem;
+    backdrop-filter: blur(1px);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    padding: 5px 10px 5px 10px;
+}
+
+.images .card:hover .image-details {
+    bottom: 0px;
+    transition: all 0.5s ease;
+}
+
+.images .card .image-details .image-title {
+    font-size: 0.7rem;
+    color: whitesmoke;
+    font-weight: 800;
+}
+
+.images .card .image-details .image-author {
+    display: flex;
+    font-size: 0.8rem;
+    color: whitesmoke;
+    font-weight: 200;
+    align-items: center;
+}
+
+.images .card .image-details .image-author span {
+    padding-left: 5px;
+}
+
+.images .card .image-details .image-rating {
+    display: flex;
+    justify-content: end;
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+.images .card .image-details .image-rating i {
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.images img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#lightbox {
+    position: fixed;
+    z-index: 5;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.lightbox-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 75%;
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#lightbox-preview-close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+}
+
+#lightbox-preview-close:hover{
+    color: gray;
+}
+
+.lightbox-wrapper .lightbox-preview {
+    height: 100%;
+    width: 100%;
+    background: whitesmoke;
+    padding: 10px 10px 0px 10px;
+    border-radius: 4px;
+}
+
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+.myPhotoGallerySwiper {
+    height: 80%;
+    width: 80%;
+}
+
+.myPhotoGalleryPreviewSwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.myPhotoGalleryPreviewSwiper .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.myPhotoGalleryPreviewSwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
