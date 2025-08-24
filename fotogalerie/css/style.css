@@ -32,7 +32,7 @@ main {
     /*gap between each column*/
 }
 
-.images .card {
+.images .gallery-image-card {
     position: relative;
     list-style: none;
     margin-bottom: 10px;
@@ -41,7 +41,7 @@ main {
     line-height: 0px;
 }
 
-.images .card .image-details {
+.images .gallery-image-card .image-details {
     position: absolute;
     bottom: -100px;
     left: 0;
@@ -53,18 +53,18 @@ main {
     padding: 5px 10px 5px 10px;
 }
 
-.images .card:hover .image-details {
+.images .gallery-image-card:hover .image-details {
     bottom: 0px;
     transition: all 0.5s ease;
 }
 
-.images .card .image-details .image-title {
+.images .gallery-image-card .image-details .image-title {
     font-size: 0.7rem;
     color: whitesmoke;
     font-weight: 800;
 }
 
-.images .card .image-details .image-author {
+.images .gallery-image-card .image-details .image-author {
     display: flex;
     font-size: 0.8rem;
     color: whitesmoke;
@@ -72,18 +72,18 @@ main {
     align-items: center;
 }
 
-.images .card .image-details .image-author span {
+.images .gallery-image-card .image-details .image-author span {
     padding-left: 5px;
 }
 
-.images .card .image-details .image-rating {
+.images .gallery-image-card .image-details .image-rating {
     display: flex;
     justify-content: end;
     font-size: 12px;
     color: whitesmoke;
 }
 
-.images .card .image-details .image-rating i {
+.images .gallery-image-card .image-details .image-rating i {
     cursor: pointer;
     font-size: 0.8rem;
 }
@@ -95,44 +95,56 @@ main {
 }
 
 #lightbox {
+    display: flex;
     position: fixed;
+    justify-content: center;
+    align-items: center;
     z-index: 5;
     height: 100vh;
     width: 100vw;
     background: rgba(0, 0, 0, 0.65);
+    animation-name: modalOpen;
+    animation-duration: 0.3s;
 }
 
 .lightbox-wrapper {
-    position: relative;
     display: flex;
     flex-direction: column;
-    height: 75%;
-    width: 60%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
+    background: black;
+    justify-content: start;
+    align-items: center;
+}
+
+.lightbox-header{
+    display: flex;
+    justify-content: end;
+    height: 50px;
+    width: 100%;
+    padding: 10px;
 }
 
 #lightbox-preview-close{
-    position: absolute;
-    top: 10px;
-    right: 10px;
     font-size: 2rem;
+    color:gray;
 }
 
 #lightbox-preview-close:hover{
-    color: gray;
+    color: whitesmoke;
+    transition: all 0.3s ease;
 }
 
 .lightbox-wrapper .lightbox-preview {
-    height: 100%;
-    width: 100%;
-    background: whitesmoke;
+    height: calc(100% - 50px);
+    width: 80%;
     padding: 10px 10px 0px 10px;
     border-radius: 4px;
 }
 
+.swiper-button-prev, .swiper-button-next{
+    color: gray !important;
+}
 
 .swiper {
     width: 100%;
@@ -142,7 +154,7 @@ main {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #444;
+    background: transparent;      /*#444*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,15 +162,15 @@ main {
 
 .swiper-slide img {
     display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%;            /*100%*/
+    height: 100%;           /*100%*/
+    object-fit: contain;    /*cover*/
 }
 
 .swiper {
     width: 100%;
     height: 300px;
-    margin-left: 0;
+    margin-left: auto;
     margin-right: auto;
 }
 
@@ -167,13 +179,65 @@ main {
     background-position: center;
 }
 
+.swiper-slide-preview{
+    height: 70px !important;
+    width: auto !important;
+    aspect-ratio: 1.5 / 1 !important;
+}
+
+.swiper-slide-preview img{
+    object-fit: cover;
+}
+
+.swiper-wrapper-preview{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .myPhotoGallerySwiper {
     height: 80%;
     width: 80%;
 }
 
+.lightbox-preview-infobox{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+
+.lightbox-preview-infobox h4{
+    color: lightgray;
+    font-weight: 400;
+}
+
+.lightbox-preview-infobox h4 span{
+    color: whitesmoke;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.lightbox-preview-infobox p{
+    font-size: 0.7rem;
+    color: lightgray;
+    margin-top: 5px;
+}
+
+.lightbox-preview-infobox p span{
+    color: white;
+    font-weight: 500;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
 .myPhotoGalleryPreviewSwiper {
-    height: 20%;
+    height: calc(100% - 80% - 70px);
+    width: 100%;
     box-sizing: border-box;
     padding: 10px 0;
 }
@@ -188,9 +252,8 @@ main {
     opacity: 1;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+@keyframes modalOpen{
+  from{ opacity: 0}
+  to{ opacity: 1}
 }

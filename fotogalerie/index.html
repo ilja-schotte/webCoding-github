@@ -17,86 +17,84 @@
     <main>
         <div id="lightbox">
             <div class="lightbox-wrapper">
-                <div class="lightbox-preview">
+                <div class="lightbox-header">
                     <i class="fa-solid fa-xmark" id="lightbox-preview-close"></i>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="lightbox-preview">
                     <!-- Swiper -->
-
-                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper myPhotoGallerySwiper">
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                        class="swiper myPhotoGallerySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                                <img src="media/nature/pic1.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                                <img src="media/nature/pic2.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                                <img src="media/nature/pic3.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                                <img src="media/nature/pic4.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                                <img src="media/nature/pic5.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                                <img src="media/nature/pic6.jpg" />
                             </div>
                             <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                                <img src="media/nature/pic7.jpg" />
                             </div>
                         </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+                        <!--<div class="swiper-button-next"></div>-->
+                        <!--<div class="swiper-button-prev"></div>-->
+                    </div>
+                    <div class="lightbox-preview-infobox">
+                        <h4>
+                            <i class="fa-solid fa-camera"></i>
+                            <span>Fotograf</span>
+                        </h4>
+                        <p>
+                            Ort:
+                            <span>Irgendwo</span>
+                            Titel:
+                            <span>Sonnenaufgang bei Nacht</span>
+                        </p>
                     </div>
                     <div thumbsSlider="" class="swiper myPhotoGalleryPreviewSwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                        <div class="swiper-wrapper swiper-wrapper-preview">
+                            <div class="swiper-slide swiper-slide-preview">
+                                <img src="media/nature/pic1.jpg" />
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                            <div class="swiper-slide swiper-slide-preview">
+                                <img src="media/nature/pic2.jpg" />
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                            <div class="swiper-slide swiper-slide-preview">
+                                <img src="media/nature/pic3.jpg" />
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                            <div class="swiper-slide swiper-slide-preview">
+                                <img src="media/nature/pic4.jpg" />
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                            <div class="swiper-slide swiper-slide-preview">
+                                <img src="media/nature/pic5.jpg" />
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+                            <div class="swiper-slide swiper-slide-preview">
+                                <img src="media/nature/pic6.jpg" />
                             </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+                            <div class="swiper-slide swiper-slide-preview">
+                                <img src="media/nature/pic7.jpg" />
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-button-prev"></div>
             </div>
         </div>
         <section class="gallery">
             <ul class="images">
-                <li class="card">
+                <li class="gallery-image-card">
                     <img src="media/nature/pic1.jpg" alt="img">
                     <div class="image-details">
                         <div class="image-title">
@@ -111,7 +109,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="gallery-image-card">
                     <img src="media/nature/pic2.jpg" alt="img">
                     <div class="image-details">
                         <div class="image-title">
@@ -126,7 +124,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="gallery-image-card">
                     <img src="media/nature/pic3.jpg" alt="img">
                     <div class="image-details">
                         <div class="image-title">
@@ -141,7 +139,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="gallery-image-card">
                     <img src="media/nature/pic4.jpg" alt="img">
                     <div class="image-details">
                         <div class="image-title">
@@ -156,7 +154,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="gallery-image-card">
                     <img src="media/nature/pic5.jpg" alt="img">
                     <div class="image-details">
                         <div class="image-title">
@@ -171,7 +169,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="gallery-image-card">
                     <img src="media/nature/pic6.jpg" alt="img">
                     <div class="image-details">
                         <div class="image-title">
@@ -186,7 +184,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="card">
+                <li class="gallery-image-card">
                     <img src="media/nature/pic7.jpg" alt="img">
                     <div class="image-details">
                         <div class="image-title">
@@ -204,6 +202,7 @@
             </ul>
         </section>
     </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Eigene Scripte-->
