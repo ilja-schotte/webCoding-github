@@ -95,7 +95,7 @@ main {
 }
 
 #lightbox {
-    display: flex;
+    display: none;
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -117,7 +117,7 @@ main {
     align-items: center;
 }
 
-.lightbox-header{
+.lightbox-header {
     display: flex;
     justify-content: end;
     height: 50px;
@@ -125,82 +125,37 @@ main {
     padding: 10px;
 }
 
-#lightbox-preview-close{
+#lightbox-preview-close {
     font-size: 2rem;
-    color:gray;
+    color: gray;
 }
 
-#lightbox-preview-close:hover{
+#lightbox-preview-close:hover {
     color: whitesmoke;
     transition: all 0.3s ease;
 }
 
 .lightbox-wrapper .lightbox-preview {
+    display: flex;
+    flex-direction: column;
     height: calc(100% - 50px);
     width: 80%;
     padding: 10px 10px 0px 10px;
     border-radius: 4px;
+    justify-content: center;
+    align-items: center;
 }
 
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
     color: gray !important;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
-}
 
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: transparent;      /*#444*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.swiper-slide img {
-    display: block;
-    width: 100%;            /*100%*/
-    height: 100%;           /*100%*/
-    object-fit: contain;    /*cover*/
-}
-
-.swiper {
-    width: 100%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.swiper-slide {
-    background-size: cover;
-    background-position: center;
-}
-
-.swiper-slide-preview{
-    height: 70px !important;
-    width: auto !important;
-    aspect-ratio: 1.5 / 1 !important;
-}
-
-.swiper-slide-preview img{
-    object-fit: cover;
-}
-
-.swiper-wrapper-preview{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.myPhotoGallerySwiper {
-    height: 80%;
-    width: 80%;
-}
-
-.lightbox-preview-infobox{
+/* Infobox */
+/*=====================================================*/
+.lightbox-preview-infobox {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -211,49 +166,129 @@ main {
     font-size: 0.8rem;
 }
 
-.lightbox-preview-infobox h4{
+.lightbox-preview-infobox h4 {
     color: lightgray;
     font-weight: 400;
 }
 
-.lightbox-preview-infobox h4 span{
+.lightbox-preview-infobox h4 span {
     color: whitesmoke;
     font-weight: 500;
     margin-right: 10px;
 }
 
-.lightbox-preview-infobox p{
+.lightbox-preview-infobox p {
     font-size: 0.7rem;
     color: lightgray;
     margin-top: 5px;
 }
 
-.lightbox-preview-infobox p span{
+.lightbox-preview-infobox p span {
     color: white;
     font-weight: 500;
     font-size: 0.8rem;
     margin-right: 10px;
 }
 
-.myPhotoGalleryPreviewSwiper {
-    height: calc(100% - 80% - 70px);
+/*=====================================================*/
+
+.swiper {
     width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.myPreviewSwiper {
+    height: calc(100% - 70px - 15%) !important;
+    width: 100%;
+}
+
+.previewSwiperImage {
+    width: auto !important;
+    max-width: 100%;
+    height: auto !important;
+    max-height: 100%;
+    object-fit: contain !important;
+}
+
+.myPreviewThumbsSwiper-wrapper {
+    display: flex;
+    height: 15%;
+    max-width: 800px;
+}
+
+.myPreviewThumbsSwiper {
+    height: 100%;
     box-sizing: border-box;
     padding: 10px 0;
 }
 
-.myPhotoGalleryPreviewSwiper .swiper-slide {
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    /* #444; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+
+
+.myPreviewThumbsSwiper .swiper-slide {
     width: 25%;
     height: 100%;
     opacity: 0.4;
 }
 
-.myPhotoGalleryPreviewSwiper .swiper-slide-thumb-active {
+.myPreviewThumbsSwiper .swiper-slide-thumb-active {
     opacity: 1;
 }
 
+/* mobile */
+@media screen and (max-width: 800px) {
 
-@keyframes modalOpen{
-  from{ opacity: 0}
-  to{ opacity: 1}
+    .myPreviewThumbsSwiper-wrapper {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-height: 500px) {
+
+    .myPreviewThumbsSwiper-wrapper {
+        display: none;
+    }
+
+    .myPreviewSwiper {
+        height: 80%;
+    }
+
+    .lightbox-preview-infobox{
+        height: 20%;
+    }
+}
+
+
+/*=====================================================*/
+@keyframes modalOpen {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
