@@ -34,7 +34,7 @@ addClickEventsToMenuItems();
 function mobileNavigationSlide() {
 
     /*
-    Beim Klicke auf das Burger-Navigation-Symbol soll das Nivationsmenü
+    Beim Klicken auf das Burger-Navigation-Symbol soll das Nivationsmenü
     sichtbar werden.
     */
 
@@ -277,3 +277,38 @@ function initializeAboutSwiperJS() {
     });
 }
 initializeAboutSwiperJS();
+
+
+/* 
+    ============================ Galerie ==========================
+    ================================================================
+*/
+
+function initializeGalleryAnimations() {
+
+    /*
+    Hintergrundanimationen in der Sektion "about"
+    */
+    let t1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#gallery',
+            start: "top 80%",
+            scroller: "main"
+        },
+    });
+
+    let t2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#gallery',
+            start: "top 80%",
+            scroller: "main"
+        },
+    });
+
+    t1.from('#gallery_darkbox', { x: -100, y: -100, opacity: 0, duration: 0.8 });
+    t2.from('#gallery_whitebox', { x: 100, y: 100, opacity: 0, duration: 0.8 });
+        /*.from('#about_whitebox_content_box_image', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_whitebox_content_box_text', { y: 20, opacity: 0, duration: 0.3 })
+        .from('#about_whitebox_content_box_swiper', { y: 20, opacity: 0, duration: 0.3 });*/
+}
+initializeGalleryAnimations();

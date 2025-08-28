@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/impressum.css">
     <link rel="stylesheet" href="css/about_swiper.css">
     <link rel="stylesheet" href="/css/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,7 +70,7 @@
     </header>
     <main>
         <section id="landing">
-            <img src="media/pexels-ajlobo-1205022.jpg" id="landing_background">
+            <img src="media/backgrounds/landing_background.jpg" id="landing_background">
             <div id="landing_section_main" class="section_main">
                 <div id="landing_text">
                     <i class="fa-solid fa-quote-left"></i>
@@ -205,14 +206,27 @@
         </section>
         <section id="gallery">
             <div class="gallery-entry-bar"></div>
-            <img src="media/gallery_background.jpg" id="gallery_background">
-            <div class="section_main">
+            <div class="gallery_background">
+                <img src="media/backgrounds/gallery_background.jpg">
+                <div class="gallery-background-filter"></div>
+            </div>
+            <div id="gallery-section-main" class="section_main">
+                <div id="gallery_darkbox"></div>
+                <div id="gallery_whitebox">
+                    <h1>Galerie</h1>
+                    <div id="gallery_whitebox_content">
+                        <div class="gallery-album-swiper-container">
+
+                        </div>
+                        <div class="gallery-album-preview-container">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
+        <section class="section-impressum" id="impressum"></section>
     </main>
-    <footer id="impressum">
-
-    </footer>
     <!-- Swiper.js -->
     <script src="js/swiper-bundle.min.js"></script>
     <!-- gsap -->

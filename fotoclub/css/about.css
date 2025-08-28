@@ -35,7 +35,7 @@
 }
 
 #about_whitebox h1 {
-    height: 5%;
+    height: auto;
     width: 100%;
     text-transform: uppercase;
     font-size: clamp(2rem, 1.4vw, 3.5rem);
@@ -69,7 +69,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    content: url("../media/group_vertical_600x800.JPG");
+    content: url("../media/avatars/group_vertical_600x800.JPG");
 }
 
 #about_whitebox_content_box_text {
@@ -127,8 +127,6 @@
     }
 
     #about_whitebox h1 {
-        display: flex;
-        align-items: end;
         font-size: clamp(1.5rem, 1.4vw, 2rem);
     }
 
@@ -146,7 +144,7 @@
     }
 
     #about_whitebox h1 {
-        font-size: 1.5vh;
+        font-size: 2vh;
     }
 
     #about_whitebox_content_box_text {
@@ -175,10 +173,6 @@
         margin: auto;
     }
 
-    #about_whitebox {
-        height: 97.5%;
-    }
-
     #about_whitebox_content {
         flex-direction: row;
         align-items: center;
@@ -197,7 +191,7 @@
     }
 
     #about_whitebox_content_box_image img {
-        content: url("../media/group_vertical_600x800.JPG");
+        content: url("../media/avatars/group_vertical_600x800.JPG");
     }
 
     #about_whitebox_content_box_text {
@@ -255,11 +249,7 @@
     }
 
     #about_whitebox h1 {
-        font-size: 1.5rem;
-    }
-
-    #about_whitebox h1 {
-        height: 5%;
+        height: auto;
         width: 100%;
         text-transform: uppercase;
         font-size: clamp(2rem, 1.4vw, 3.5rem);
@@ -282,7 +272,7 @@
     }
 
     #about_whitebox_content_box_image img {
-        content: url("../media/group_hori_1000x650.JPG");
+        content: url("../media/avatars/group_hori_1000x650.JPG");
     }
 
     #about_whitebox_content_box_text {
@@ -346,7 +336,7 @@
     }
 
     #about_whitebox_content_box_image img {
-        content: url("../media/group_hori_1000x650.JPG");
+        content: url("../media/avatars/group_hori_1000x650.JPG");
         width: 100%;
     }
 
@@ -528,7 +518,7 @@
     }
 
     #about_whitebox_content_box_image img {
-        content: url("../media/group_vertical_600x800.JPG");
+        content: url("../media/avatars/group_vertical_600x800.JPG");
     }
 
     #about_whitebox_content_box_text {
