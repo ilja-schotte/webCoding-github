@@ -38,6 +38,22 @@ a {
     margin: auto;
 }
 
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /*################################## HORIZONTAL ##################################*/
 /*################################################################################*/
 
@@ -70,20 +86,22 @@ a {
 
 /* extended mobile */
 /* Bildschirmbreite kleiner 1000px UND horizontal */
-@media screen and (orientation: landscape) and (max-width: 1000px){
+@media screen and (orientation: landscape) and (max-width: 1000px) {
 
     .section_main {
-        height: 90%;    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        height: 90%;
+        /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
         max-height: 100vh;
         max-width: 800px;
     }
 }
 
 /* mobile */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
 
     .section_main {
-        height: calc(80% - 20%);    /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
+        height: calc(80% - 20%);
+        /*<-- Bei Änderung der Höhe - margin-top berücksichtigen */
         margin-top: 20%;
         min-width: 0;
     }
@@ -124,7 +142,7 @@ a {
 
 /* Bildschirmbreite kleiner 800px und orientierung egal:*/
 /* modbile */
-@media screen and (max-width: 800px) and ((orientation: portrait) or (orientation: landscape)){
+@media screen and (max-width: 800px) and ((orientation: portrait) or (orientation: landscape)) {
 
     .section_main {
         max-width: none;

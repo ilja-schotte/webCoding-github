@@ -110,7 +110,7 @@ function showCurrentSectionInNavigationBar() {
             if (entry.isIntersecting) {
                 activeAnchor.querySelector('.navMenuItem-pointer').style.animation = `navMenuItem-pointer-appear 0.5s ease forwards`;
             }
-            else{
+            else {
                 activeAnchor.querySelector('.navMenuItem-pointer').style.animation = `navMenuItem-pointer-disappear 0.5s ease forwards`;
             }
 
@@ -278,6 +278,58 @@ function initializeAboutSwiperJS() {
 }
 initializeAboutSwiperJS();
 
+// ================================================================
+function initializeGalleryAlbumSwiperJS() {
+    /*
+        Initialisiert den Swiper für die zur Verfügung stehenden Alben.
+    */
+    var albumSwiper = new Swiper(".myAlbumSwiper", {
+        slidesPerView: 5,
+        centeredSlides: false,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },             
+            400: {
+                slidesPerView: 2,
+                spaceBetween: 10
+            },       
+            600: {
+                slidesPerView: 3,
+                spaceBetween: 10
+            },
+            800: {
+                slidesPerView: 4,
+                spaceBetween: 10
+            },
+            1200: {
+                slidesPerView: 5,
+                spaceBetween: 10
+            },
+            1500: {
+                spaceBetween: 30,
+            },
+            2500:{
+                slidesPerView: 6,
+                spaceBetween: 30
+            },
+            3500:{
+                slidesPerView: 7,
+                spaceBetween: 30
+            }
+        }
+    });
+}
+initializeGalleryAlbumSwiperJS();
+
+
 
 /* 
     ============================ Galerie ==========================
@@ -307,8 +359,8 @@ function initializeGalleryAnimations() {
 
     t1.from('#gallery_darkbox', { x: -100, y: -100, opacity: 0, duration: 0.8 });
     t2.from('#gallery_whitebox', { x: 100, y: 100, opacity: 0, duration: 0.8 });
-        /*.from('#about_whitebox_content_box_image', { y: 20, opacity: 0, duration: 0.3 })
-        .from('#about_whitebox_content_box_text', { y: 20, opacity: 0, duration: 0.3 })
-        .from('#about_whitebox_content_box_swiper', { y: 20, opacity: 0, duration: 0.3 });*/
+    /*.from('#about_whitebox_content_box_image', { y: 20, opacity: 0, duration: 0.3 })
+    .from('#about_whitebox_content_box_text', { y: 20, opacity: 0, duration: 0.3 })
+    .from('#about_whitebox_content_box_swiper', { y: 20, opacity: 0, duration: 0.3 });*/
 }
 initializeGalleryAnimations();
