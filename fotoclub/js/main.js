@@ -314,10 +314,11 @@ function initializeGalleryAlbumSwiperJS() {
                 spaceBetween: 10
             },
             1500: {
+                slidesPerView: 6,
                 spaceBetween: 30,
             },
             2500:{
-                slidesPerView: 6,
+                slidesPerView: 7,
                 spaceBetween: 30
             },
             3500:{
