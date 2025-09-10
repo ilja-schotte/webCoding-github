@@ -40,6 +40,14 @@
     font-size: 1.5rem;
 }
 
+.swiper-button-next-about-members{
+    display: block !important;
+}
+
+.swiper-button-prev-about-members{
+    display: block !important;
+}
+
 @media screen and (max-width: 3000px) and (orientation: landscape) {
     .swiper-name-box {
         font-size: clamp(1rem, 0.7vw, 1.5rem);
