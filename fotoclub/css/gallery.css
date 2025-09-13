@@ -47,7 +47,7 @@
 
 #gallery-section-main {
     height: auto;
-    min-height: 75vh;
+    min-height: 85vh;
     width: auto;
     min-width: 75vw;
     margin: 100px auto auto auto;
@@ -123,11 +123,30 @@
 }
 
 .swiper-button-prev-gallery-album {
+    position: absolute;
+    z-index: 999;
+    color: gray;
     left: 0px !important;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
 }
 
 .swiper-button-next-gallery-album {
+    position: absolute;
+    z-index: 999;
+    color: gray;
     right: 0px !important;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+.swiper-button-prev-gallery-album:hover,
+.swiper-button-next-gallery-album:hover {
+    color: black;
+    cursor: pointer;
 }
 
 .gallery-album-title {
@@ -135,7 +154,7 @@
     color: black !important;
     padding: 30px 0px 10px 0px;
     text-align: center;
-    font-size: 2rem !important;
+    font-size: 3rem !important;
     text-transform: none !important;
 }
 
@@ -170,6 +189,7 @@
     backdrop-filter: blur(1px);
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
     padding: 5px 10px 5px 10px;
+    pointer-events: none;
 }
 
 .gallery-album-preview-container-images-preview .gallery-image-card:hover .image-details {
@@ -299,7 +319,12 @@
     }
 
     .gallery-album-card h1 {
-        font-size: clamp(0.7rem, 0.7vw, 1rem) !important;
+        font-size: 1.25rem !important;
+    }
+
+    .swiper-button-next-gallery-album,
+    .swiper-button-prev-gallery-album {
+        font-size: 2rem;
     }
 }
 
@@ -327,7 +352,7 @@
     }
 
     .gallery-album-card h1 {
-        font-size: clamp(0.6rem, 0.7vw, 0.8rem) !important;
+        font-size: 1rem !important;
     }
 }
 
@@ -352,7 +377,7 @@
     }
 
     .gallery-album-card h1 {
-        font-size: clamp(0.5rem, 0.7vw, 0.8rem) !important;
+        font-size: 1rem !important;
     }
 }
 
@@ -389,6 +414,10 @@
     .gallery-album-preview-container {
         height: calc(100% - 150px);
     }
+
+    .gallery-album-card h1 {
+        font-size: 0.8rem !important;
+    }
 }
 
 /*################################### VERTIKAL ###################################*/
@@ -396,10 +425,6 @@
 
 /* Bildschirmbreite kleiner 3000px und Ausrichtung vertikal */
 @media screen and (orientation: portrait) and (max-width: 3000px) {
-
-    #gallery_whitebox {
-        height: 97.5%;
-    }
 
     #gallery-section-main {
         width: 80vw;
@@ -416,6 +441,11 @@
 
     .gallery-album-card h1 {
         font-size: 1.1rem !important;
+    }
+
+    .swiper-button-next-gallery-album,
+    .swiper-button-prev-gallery-album {
+        font-size: 2rem;
     }
 }
 

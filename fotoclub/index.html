@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/impressum.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/about_swiper.css">
+    <link rel="stylesheet" href="css/gallery_lightbox.css">
     <link rel="stylesheet" href="css/gallery_swiper.css">
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +26,103 @@
 </head>
 
 <body>
+
+
+
+    <div id="gallery-lightbox">
+        <div class="gallery-lightbox-wrapper">
+            <div class="gallery-lightbox-header">
+                <div id="gallery-lightbox-header-album-title"></div>
+                <i class="fa-solid fa-xmark" id="gallery-lightbox-preview-close"></i>
+            </div>
+            <div class="swiper-button-next-preview">
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="gallery-lightbox-preview">
+
+                <!-- Swiper ================================================================================-->
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                    class="swiper myGalleryPreviewSwiper">
+
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide previewSlide">
+                            <img class="galleryPreviewSwiperImage" src="media/albums/nature/pic1.jpg" />
+                        </div>
+                        <div class="swiper-slide previewSlide">
+                            <img class="galleryPreviewSwiperImage" src="media/albums/nature/pic2.jpg" />
+                        </div>
+                        <div class="swiper-slide previewSlide">
+                            <img class="galleryPreviewSwiperImage" src="media/albums/nature/pic3.jpg" />
+                        </div>
+                        <div class="swiper-slide previewSlide">
+                            <img class="galleryPreviewSwiperImage" src="media/albums/nature/pic4.jpg" />
+                        </div>
+                        <div class="swiper-slide previewSlide">
+                            <img class="galleryPreviewSwiperImage" src="media/albums/nature/pic5.jpg" />
+                        </div>
+                        <div class="swiper-slide previewSlide">
+                            <img class="galleryPreviewSwiperImage" src="media/albums/nature/pic6.jpg" />
+                        </div>
+                        <div class="swiper-slide previewSlide">
+                            <img class="galleryPreviewSwiperImage" src="media/albums/nature/pic7.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <!--========================================================================================-->
+
+                <!-- Infobox ===============================================================================-->
+                <div class="gallery-lightbox-preview-infobox">
+                    <h4>
+                        <i class="fa-solid fa-camera"></i>
+                        <span>Fotograf</span>
+                    </h4>
+                    <p>
+                        Ort:
+                        <span>Irgendwo</span>
+                        Titel:
+                        <span>Sonnenaufgang bei Nacht</span>
+                    </p>
+                </div>
+                <!--========================================================================================-->
+
+                <div class="galleryPreviewThumbsSwiper-wrapper">
+                    <div thumbsSlider="" class="swiper" id="myGalleryPreviewThumbsSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="galleryPreviewThumbsSwiperImage" src="media/albums/nature/pic1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="galleryPreviewThumbsSwiperImage" src="media/albums/nature/pic2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="galleryPreviewThumbsSwiperImage" src="media/albums/nature/pic3.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="galleryPreviewThumbsSwiperImage" src="media/albums/nature/pic4.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="galleryPreviewThumbsSwiperImage" src="media/albums/nature/pic5.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="galleryPreviewThumbsSwiperImage" src="media/albums/nature/pic6.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="galleryPreviewThumbsSwiperImage" src="media/albums/nature/pic7.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PreviewThumbSwiper ====================================================================-->
+
+                <!--========================================================================================-->
+            </div>
+
+            <div class="swiper-button-prev-preview">
+                <i class="fa-solid fa-chevron-left"></i>
+            </div>
+        </div>
+    </div>
     <header>
         <nav>
             <div class="logo">
@@ -55,10 +153,10 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class='navMenuItem' data-sectionname="impressum">
+                    <a href="#" class='navMenuItem' data-sectionname="contact">
                         <div class="navMenuItem-pointer"></div>
                         <i class="fa-solid fa-info"></i>
-                        Impressum
+                        Kontakt
                     </a>
                 </li>
             </ul>
@@ -216,19 +314,21 @@
                     <h1>Galerie</h1>
                     <div id="gallery_whitebox_content">
                         <div class="gallery-album-swiper-container">
-                            <div class="swiper-button-prev swiper-button-prev-gallery-album"></div>
+                            <div class="swiper-button-prev-gallery-album">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
                             <div class="gallery-album-swiper-container-wrapper">
                                 <!-- Swiper -->
                                 <div class="swiper myAlbumSwiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide gallery-swiper-slide-albums">
-                                            <div class="gallery-album-card">
+                                            <div class="gallery-album-card" data-albumname="Natur">
                                                 <img src="media/albums/nature/pic1.jpg" alt="img">
                                                 <h1>Natur</h1>
                                             </div>
                                         </div>
                                         <div class="swiper-slide gallery-swiper-slide-albums">
-                                            <div class="gallery-album-card">
+                                            <div class="gallery-album-card" data-albumname="Pokemon">
                                                 <img src="media/albums/pokemon/pic1.jpg" alt="img">
                                                 <h1>Pokemon</h1>
                                             </div>
@@ -238,18 +338,18 @@
                                         <div class="swiper-slide gallery-swiper-slide-albums">Slide 5</div>
                                         <div class="swiper-slide gallery-swiper-slide-albums">Slide 6</div>
                                         <div class="swiper-slide gallery-swiper-slide-albums">Slide 7</div>
-                                        <!--<div class="swiper-slide gallery-swiper-slide-albums">Slide 8</div>
-                                    <div class="swiper-slide gallery-swiper-slide-albums">Slide 9</div>-->
                                     </div>
                                 </div>
                             </div>
-                            <div class="swiper-button-next swiper-button-next-gallery-album"></div>
+                            <div class="swiper-button-next-gallery-album">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
                         </div>
                         <h1 class="gallery-album-title">Title</h1>
                         <div class="gallery-album-preview-container">
                             <!-- Bilder Preview -->
                             <ul class="gallery-album-preview-container-images-preview">
-                                <li class="gallery-image-card" data-imageIndex="0">
+                                <li class="gallery-image-card" data-imageIndex="0" data-albumname="Natur">
                                     <img src="media/albums/nature/pic1.jpg" alt="img">
                                     <div class="image-details">
                                         <div class="image-title">
@@ -264,7 +364,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="gallery-image-card" data-imageIndex="1">
+                                <li class="gallery-image-card" data-imageIndex="1" data-albumname="Natur">
                                     <img src="media/albums/nature/pic2.jpg" alt="img">
                                     <div class="image-details">
                                         <div class="image-title">
@@ -279,7 +379,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="gallery-image-card" data-imageIndex="2">
+                                <li class="gallery-image-card" data-imageIndex="2" data-albumname="Natur">
                                     <img src="media/albums/nature/pic3.jpg" alt="img">
                                     <div class="image-details">
                                         <div class="image-title">
@@ -294,7 +394,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="gallery-image-card" data-imageIndex="3">
+                                <li class="gallery-image-card" data-imageIndex="3" data-albumname="Natur">
                                     <img src="media/albums/nature/pic4.jpg" alt="img">
                                     <div class="image-details">
                                         <div class="image-title">
@@ -309,7 +409,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="gallery-image-card" data-imageIndex="4">
+                                <li class="gallery-image-card" data-imageIndex="4" data-albumname="Natur">
                                     <img src="media/albums/nature/pic5.jpg" alt="img">
                                     <div class="image-details">
                                         <div class="image-title">
@@ -324,7 +424,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="gallery-image-card" data-imageIndex="5">
+                                <li class="gallery-image-card" data-imageIndex="5" data-albumname="Natur">
                                     <img src="media/albums/nature/pic6.jpg" alt="img">
                                     <div class="image-details">
                                         <div class="image-title">
@@ -339,7 +439,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="gallery-image-card" data-imageIndex="6">
+                                <li class="gallery-image-card" data-imageIndex="6" data-albumname="Natur">
                                     <img src="media/albums/nature/pic7.jpg" alt="img">
                                     <div class="image-details">
                                         <div class="image-title">
@@ -361,7 +461,15 @@
                 </div>
             </div>
         </section>
-        <section class="section-impressum" id="impressum"></section>
+        <section class="section-contact" id="contact">
+            <div class="contact-address">
+                <h3>DWD Fotoclub</h3>
+                <p>Deutscher Wetterdienst</p>
+                <p>Michendorfer Chaussee 23</p>
+                <p>14473 Potsdam</p>
+                <p class="contact-email">dwd-fotoclub@etik.com</p>
+            </div>
+        </section>
     </main>
     <!-- Konfiguration -->
     <script src="js/config.js"></script>
