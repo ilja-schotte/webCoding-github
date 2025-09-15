@@ -288,42 +288,30 @@ function initializeGalleryAlbumSwiperJS() {
             prevEl: ".swiper-button-prev-gallery-album",
         },
         breakpoints: {
-            "@0.00": {
-                slidesPerView: 1,
-                spaceBetween: 10,
-            },
-            "@0.50": {
+            450: {
                 slidesPerView: 2,
                 spaceBetween: 10,
             },
-            "@0.75": {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            },
-            "@1.00": {
+            700: {
                 slidesPerView: 3,
                 spaceBetween: 10,
             },
-            "@1.25": {
+            1200: {
                 slidesPerView: 4,
                 spaceBetween: 10,
             },
-            "@1.50": {
+            1500: {
                 slidesPerView: 5,
                 spaceBetween: 10,
             },
-            "@1.75": {
+            1800: {
                 slidesPerView: 6,
                 spaceBetween: 10,
             },
-            "@2.00": {
-                slidesPerView: 6,
-                spaceBetween: 10,
-            },
-            "@2.25": {
+            1800: {
                 slidesPerView: 7,
                 spaceBetween: 10,
-            },
+            }
         }
     });
 }
@@ -351,7 +339,7 @@ function initializePhotogallerySwiperJS() {
                 slidesPerView: 6,
                 spaceBetween: 10,
             },
-            2000:{
+            2000: {
                 slidesPerView: 6,
                 spaceBetween: 10,
             }

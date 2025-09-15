@@ -15,6 +15,7 @@
     object-fit: cover;
     z-index: -1;
     transform: translateZ(-10px) scale(2);
+    content: url(../media/backgrounds/landing_background.jpg);
 }
 
 #landing_text {
@@ -124,7 +125,7 @@
 /* Bildschirmbreite kleiner 3000px */
 @media screen and (orientation: portrait) and (max-width: 3000px) {
 
-    #landing{
+    #landing {
         justify-content: start;
         align-items: start;
     }
@@ -183,7 +184,7 @@
 
 /* Bildschirmbreite kleiner 800px orientierung horizontal*/
 /* mobile */
-@media screen and (max-width: 800px) and (orientation: landscape){
+@media screen and (max-width: 800px) and (orientation: landscape) {
 
     #landing_section_main {
         height: calc(80% - 20%);
@@ -215,7 +216,7 @@
 
 /* Bildschirmbreite kleiner 800px orientierung vertikal*/
 /* mobile */
-@media screen and (max-width: 800px) and (orientation: portrait){
+@media screen and (max-width: 800px) and (orientation: portrait) {
 
     #landing_section_main {
         padding: 20% 0 20% 0;
@@ -237,9 +238,12 @@
         font-size: clamp(0.75rem, 0.5vw, 1rem);
     }
 
-
-
     #landing_text i {
         font-size: 1rem;
     }
+
+    #landing_background {
+        content: url(../media/backgrounds/mobile-landing-background.jpg);
+    }
+
 }

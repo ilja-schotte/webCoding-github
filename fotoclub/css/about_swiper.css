@@ -1,5 +1,3 @@
-
-
 .about-swiper-slide {
     border: 1px solid lightgray;
     height: calc((100% - 30px) / 2) !important;
@@ -40,11 +38,11 @@
     font-size: 1.5rem;
 }
 
-.swiper-button-next-about-members{
+.swiper-button-next-about-members {
     display: block !important;
 }
 
-.swiper-button-prev-about-members{
+.swiper-button-prev-about-members {
     display: block !important;
 }
 
@@ -95,5 +93,11 @@
 @media screen and (max-width: 1000px) and (orientation: portrait) {
     .swiper-name-box {
         font-size: clamp(1rem, 1.5vw, 1.2rem);
+    }
+}
+
+@media screen and (max-width: 500px) and (orientation: portrait) {
+    .swiper-name-box {
+        font-size: clamp(0.8rem, 1.5vw, 1.2rem);
     }
 }

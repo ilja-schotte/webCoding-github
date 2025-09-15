@@ -2,5 +2,6 @@
     height: 100% !important;
     background: transparent;
     cursor: pointer;
+    border: 1px solid whitesmoke;
 }
 
